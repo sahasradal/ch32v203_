@@ -202,244 +202,114 @@
  
 .equ R32_DMA1_CNTR4 ,0x40020048  
 .equ R32_DMA1_PADDR4 ,0x4002004C 
-.equ R32_DMA1_MADDR4 
-.equ R32_DMA1_CFGR5 
-0x40020050 DMA1 channel4 memory address register 
-0x40020058 DMA1 channel5 configuration register 
-0x00000000 
-.equ R32_DMA1_CNTR5 
-0x00000000 
-0x4002005C DMA1 channel5 transferred data register 
-.equ R32_DMA1_PADDR5 
-0x00000000 
-0x40020060 DMA1 channel5 peripheral address register 0x00000000 
-.equ R32_DMA1_MADDR5 
-.equ R32_DMA1_CFGR6 
-0x40020064 DMA1 channel5 memory address register 
-0x4002006C DMA1 channel6 configuration register 
-0x00000000 
-.equ R32_DMA1_CNTR6 
-0x00000000 
-0x40020070 DMA1 channel6 transferred data register 
-.equ R32_DMA1_PADDR6 
-0x00000000 
-0x40020074 DMA1 channel6 peripheral address register 0x00000000 
-.equ R32_DMA1_MADDR6 
-.equ R32_DMA1_CFGR7 
-0x40020078 DMA1 channel6 memory address register 
-0x40020080 DMA1 channel7 configuration register 
-0x00000000 
-.equ R32_DMA1_CNTR7 
-0x00000000 
-0x40020084 DMA1 channel7 transferred data register 
-.equ R32_DMA1_PADDR7 
-0x00000000 
-0x40020088 DMA1 channel7 peripheral address register 0x00000000 
+.equ R32_DMA1_MADDR4 ,0x40020050
+.equ R32_DMA1_CFGR5 ,0x40020058
+
+.equ R32_DMA1_CNTR5 ,0x4002005C 
+.equ R32_DMA1_PADDR5,0x40020060 
+.equ R32_DMA1_MADDR5 ,0x40020064
+.equ R32_DMA1_CFGR6 ,0x4002006C
+
+.equ R32_DMA1_CNTR6 ,0x40020070  
+.equ R32_DMA1_PADDR6,0x40020074  
+.equ R32_DMA1_MADDR6 ,0x40020078
+.equ R32_DMA1_CFGR7 ,0x40020080
+
+.equ R32_DMA1_CNTR7,0x40020084 
+.equ R32_DMA1_PADDR7,0x40020088 
 
 
-.equ R32_DMA1_MADDR7 
-0x4002008C DMA1 channel7 memory address register 
-.equ R32_DMA1_CFGR8 
-0x00000000 
-0x40020094 DMA1 channel8 configuration register 
-.equ R32_DMA1_CNTR8 
-0x00000000 
-0x40020098 DMA1 channel8 transferred data register 
-.equ R32_DMA1_PADDR8 
-0x00000000 
-0x4002009C DMA1 channel8 peripheral address register 0x00000000 
-.equ R32_DMA1_MADDR8 
-0x400200A0 DMA1 channel8 memory address register 
-Table 11-6 DMA2 registers 
-Name 
-Access address 
-Description 
-0x00000000 
-.equ R32_DMA2_INTFR 
-Reset value 
-0x40020400 DMA2 interrupt flag register 
-.equ R32_DMA2_INTFCR 
-0x00000000 
-0x40020404 DMA2 interrupt flag clear register 
-.equ R32_DMA2_CFGR1 
-0x00000000 
-0x40020408 DMA2 channel1 configuration register 
-.equ R32_DMA2_CNTR1 
-0x00000000 
-0x4002040C DMA2 channel1 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR1 
-.equ R32_DMA2_MADDR1 
-0x40020410 DMA2 channel1 peripheral address register 0x00000000 
-0x40020414 DMA2 channel1 memory address register 0x00000000 
-.equ R32_DMA2_CFGR2 
-.equ R32_DMA2_CNTR2 
-0x4002041C DMA2 channel2 configuration register 
-0x00000000 
-0x40020420 DMA2 channel2 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR2 
-.equ R32_DMA2_MADDR2 
-0x40020424 DMA2 channel2 peripheral address register 0x00000000 
-0x40020428 DMA2 channel2 memory address register 0x00000000 
-.equ R32_DMA2_CFGR3 
-.equ R32_DMA2_CNTR3 
-0x40020430 DMA2 channel3 configuration register 
-0x00000000 
-0x40020434 DMA2 channel3 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR3 
-.equ R32_DMA2_MADDR3 
-0x40020438 DMA2 channel3 peripheral address register 0x00000000 
-0x4002043C DMA2 channel3 memory address register 0x00000000 
-.equ R32_DMA2_CFGR4 
-.equ R32_DMA2_CNTR4 
-0x40020444 DMA2 channel4 configuration register 
-0x00000000 
-0x40020448 DMA2 channel4 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR4 
-.equ R32_DMA2_MADDR4 
-0x4002044C DMA2 channel4 peripheral address register 0x00000000 
-0x40020450 DMA2 channel4 memory address register 0x00000000 
-.equ R32_DMA2_CFGR5 
-.equ R32_DMA2_CNTR5 
-0x40020458 DMA2 channel5 configuration register 
-0x00000000 
-0x4002045C DMA2 channel5 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR5 
-.equ R32_DMA2_MADDR5 
-0x40020460 DMA2 channel5 peripheral address register 0x00000000 
-0x40020464 DMA2 channel5 memory address register 0x00000000 
-.equ R32_DMA2_CFGR6 
-.equ R32_DMA2_CNTR6 
-0x4002046C DMA2 channel6 configuration register 
-0x00000000 
-0x40020470 DMA2 channel6 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR6 
-.equ R32_DMA2_MADDR6 
-0x40020474 DMA2 channel6 peripheral address register 0x00000000 
-0x40020478 DMA2 channel6 memory address register 0x00000000 
-.equ R32_DMA2_CFGR7 
-.equ R32_DMA2_CNTR7 
-0x40020480 DMA2 channel7 configuration register 
-0x00000000 
-0x40020484 DMA2 channel7 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR7 
-.equ R32_DMA2_MADDR7 
-0x40020488 DMA2 channel7 peripheral address register 0x00000000 
-0x4002048C DMA2 channel7 memory address register 0x00000000 
-.equ R32_DMA2_CFGR8 
-.equ R32_DMA2_CNTR8 
-0x40020490 DMA2 channel8 configuration register 
-0x00000000 
-0x40020494 DMA2 channel8 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR8 
-.equ R32_DMA2_MADDR8 
-0x40020498 DMA2 channel8 peripheral address register 0x00000000 
-0x4002049C DMA2 channel8 memory address register 0x00000000 
-.equ R32_DMA2_CFGR9 
-.equ R32_DMA2_CNTR9 
-0x400204A0 DMA2 channel9 configuration register 
-0x00000000 
-0x400204A4 DMA2 channel9 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR9 
-0x400204A8 DMA2 channel9 peripheral address register 0x00000000 
+.equ R32_DMA1_MADDR7,0x4002008C  
+.equ R32_DMA1_CFGR8,0x40020094  
+.equ R32_DMA1_CNTR8,0x40020098  
+.equ R32_DMA1_PADDR8 ,0x4002009C 
+.equ R32_DMA1_MADDR8 ,0x400200A0 
 
 
-.equ R32_DMA1_MADDR7 
-0x4002008C DMA1 channel7 memory address register 
-.equ R32_DMA1_CFGR8 
-0x00000000 
-0x40020094 DMA1 channel8 configuration register 
-.equ R32_DMA1_CNTR8 
-0x00000000 
-0x40020098 DMA1 channel8 transferred data register 
-.equ R32_DMA1_PADDR8 
-0x00000000 
-0x4002009C DMA1 channel8 peripheral address register 0x00000000 
-.equ R32_DMA1_MADDR8 
-0x400200A0 DMA1 channel8 memory address register 
-Table 11-6 DMA2 registers 
-Name 
-Access address 
-Description 
-0x00000000 
-.equ R32_DMA2_INTFR 
-Reset value 
-0x40020400 DMA2 interrupt flag register 
-.equ R32_DMA2_INTFCR 
-0x00000000 
-0x40020404 DMA2 interrupt flag clear register 
-.equ R32_DMA2_CFGR1 
-0x00000000 
-0x40020408 DMA2 channel1 configuration register 
-.equ R32_DMA2_CNTR1 
-0x00000000 
-0x4002040C DMA2 channel1 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR1 
-.equ R32_DMA2_MADDR1 
-0x40020410 DMA2 channel1 peripheral address register 0x00000000 
-0x40020414 DMA2 channel1 memory address register 0x00000000 
-.equ R32_DMA2_CFGR2 
-.equ R32_DMA2_CNTR2 
-0x4002041C DMA2 channel2 configuration register 
-0x00000000 
-0x40020420 DMA2 channel2 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR2 
-.equ R32_DMA2_MADDR2 
-0x40020424 DMA2 channel2 peripheral address register 0x00000000 
-0x40020428 DMA2 channel2 memory address register 0x00000000 
-.equ R32_DMA2_CFGR3 
-.equ R32_DMA2_CNTR3 
-0x40020430 DMA2 channel3 configuration register 
-0x00000000 
-0x40020434 DMA2 channel3 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR3 
-.equ R32_DMA2_MADDR3 
-0x40020438 DMA2 channel3 peripheral address register 0x00000000 
-0x4002043C DMA2 channel3 memory address register 0x00000000 
-.equ R32_DMA2_CFGR4 
-.equ R32_DMA2_CNTR4 
-0x40020444 DMA2 channel4 configuration register 
-0x00000000 
-0x40020448 DMA2 channel4 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR4 
-.equ R32_DMA2_MADDR4 
-0x4002044C DMA2 channel4 peripheral address register 0x00000000 
-0x40020450 DMA2 channel4 memory address register 0x00000000 
-.equ R32_DMA2_CFGR5 
-.equ R32_DMA2_CNTR5 
-0x40020458 DMA2 channel5 configuration register 
-0x00000000 
-0x4002045C DMA2 channel5 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR5 
-.equ R32_DMA2_MADDR5 
-0x40020460 DMA2 channel5 peripheral address register 0x00000000 
-0x40020464 DMA2 channel5 memory address register 0x00000000 
-.equ R32_DMA2_CFGR6 
-.equ R32_DMA2_CNTR6 
-0x4002046C DMA2 channel6 configuration register 
-0x00000000 
-0x40020470 DMA2 channel6 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR6 
-.equ R32_DMA2_MADDR6 
-0x40020474 DMA2 channel6 peripheral address register 0x00000000 
-0x40020478 DMA2 channel6 memory address register 0x00000000 
-.equ R32_DMA2_CFGR7 
-.equ R32_DMA2_CNTR7 
-0x40020480 DMA2 channel7 configuration register 
-0x00000000 
-0x40020484 DMA2 channel7 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR7 
-.equ R32_DMA2_MADDR7 
-0x40020488 DMA2 channel7 peripheral address register 0x00000000 
-0x4002048C DMA2 channel7 memory address register 0x00000000 
-R32_DMA2_CFGR8 
-R32_DMA2_CNTR8 
-0x40020490 DMA2 channel8 configuration register 
-0x00000000 
-0x40020494 DMA2 channel8 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR8 
-.equ R32_DMA2_MADDR8 
-0x40020498 DMA2 channel8 peripheral address register 0x00000000 
-0x4002049C DMA2 channel8 memory address register 0x00000000 
+.equ R32_DMA2_INTFR,0x40020400
+.equ R32_DMA2_INTFCR ,0x40020404  
+.equ R32_DMA2_CFGR1,0x40020408  
+.equ R32_DMA2_CNTR1 ,0x4002040C 
+.equ R32_DMA2_PADDR1 ,0x40020410
+.equ R32_DMA2_MADDR1 ,0x40020414
+ 
+.equ R32_DMA2_CFGR2 ,0x4002041C
+.equ R32_DMA2_CNTR2 ,0x40020420
+ 
+.equ R32_DMA2_PADDR2 ,0x40020424
+.equ R32_DMA2_MADDR2 ,0x40020428
+.equ R32_DMA2_CFGR3 ,0x40020430
+.equ R32_DMA2_CNTR3 ,0x40020434 
+.equ R32_DMA2_PADDR3 ,0x40020438 
+.equ R32_DMA2_MADDR3 ,0x4002043C
+.equ R32_DMA2_CFGR4 ,0x40020444
+.equ R32_DMA2_CNTR4 ,0x40020448
+.equ R32_DMA2_PADDR4, 0x4002044C 
+.equ R32_DMA2_MADDR4, 0x40020450 
+.equ R32_DMA2_CFGR5, 0x40020458
+.equ R32_DMA2_CNTR5, 0x4002045C
+.equ R32_DMA2_PADDR5 ,0x40020460
+.equ R32_DMA2_MADDR5 ,0x40020464
+.equ R32_DMA2_CFGR6, 0x4002046C
+.equ R32_DMA2_CNTR6, 0x40020470
+.equ R32_DMA2_PADDR6, 0x40020474
+.equ R32_DMA2_MADDR6, 0x40020478
+.equ R32_DMA2_CFGR7, 0x40020480 
+.equ R32_DMA2_CNTR7 ,0x40020484
+.equ R32_DMA2_PADDR7, 0x40020488
+.equ R32_DMA2_MADDR7, 0x4002048C 
+.equ R32_DMA2_CFGR8, 0x40020490
+.equ R32_DMA2_CNTR8, 0x40020494
+.equ R32_DMA2_PADDR8, 0x40020498 
+.equ R32_DMA2_MADDR8 ,0x4002049C
+.equ R32_DMA2_CFGR9 ,0x400204A0
+.equ R32_DMA2_CNTR9 ,0x400204A4
+.equ R32_DMA2_PADDR9,0x400204A8 
+.equ R32_DMA1_MADDR7,0x4002008C  
+.equ R32_DMA1_CFGR8,0x40020094  
+.equ R32_DMA1_CNTR8,0x40020098 
+.equ R32_DMA1_PADDR8 ,0x4002009C
+.equ R32_DMA1_MADDR8 ,0x400200A0  
+.equ R32_DMA2_INTFR ,0x40020400  
+.equ R32_DMA2_INTFCR ,0x40020404  
+.equ R32_DMA2_CFGR1,0x40020408 
+.equ R32_DMA2_CNTR1,0x4002040C 
+.equ R32_DMA2_PADDR1 ,0x40020410
+.equ R32_DMA2_MADDR1 ,0x40020414
+.equ R32_DMA2_CFGR2,0x4002041C 
+.equ R32_DMA2_CNTR2 ,0x40020420
+.equ R32_DMA2_PADDR2 ,0x40020424
+.equ R32_DMA2_MADDR2 ,0x40020428
+.equ R32_DMA2_CFGR3,0x40020430  
+.equ R32_DMA2_CNTR3 ,0x40020434
+.equ R32_DMA2_PADDR3 ,0x40020438
+.equ R32_DMA2_MADDR3 ,0x4002043C 
+.equ R32_DMA2_CFGR4 ,0x40020444
+.equ R32_DMA2_CNTR4 ,0x40020448
+.equ R32_DMA2_PADDR4,0x4002044C 
+.equ R32_DMA2_MADDR4 ,0x40020450
+.equ R32_DMA2_CFGR5,0x40020458 
+.equ R32_DMA2_CNTR5 ,0x4002045C
+.equ R32_DMA2_PADDR5 ,0x40020460
+.equ R32_DMA2_MADDR5 ,0x40020464
+.equ R32_DMA2_CFGR6 ,0x4002046C
+.equ R32_DMA2_CNTR6 ,0x40020470
+ 
+.equ R32_DMA2_PADDR6 ,0x40020474 
+.equ R32_DMA2_MADDR6 ,0x40020478
+
+.equ R32_DMA2_CFGR7 ,0x40020480
+.equ R32_DMA2_CNTR7 ,0x40020484
+ 
+.equ R32_DMA2_PADDR7, 0x40020488
+.equ R32_DMA2_MADDR7, 0x4002048C
+
+R32_DMA2_CFGR8 ,0x40020490
+R32_DMA2_CNTR8 ,0x40020494
+
+.equ R32_DMA2_PADDR8, 0x40020498
+.equ R32_DMA2_MADDR8 ,0x4002049C
+
 .equ R32_DMA2_CFGR9 
 .equ R32_DMA2_CNTR9 
 0x400204A0 DMA2 channel9 configuration register 
