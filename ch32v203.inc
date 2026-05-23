@@ -182,48 +182,24 @@
 .equ R32_GPIOD_LCKR, 0x40011418 
 .equ R32_GPIOE_LCKR, 0x40011818 
 
-.equ R32_DMA1_INTFR 
-0x40020000 DMA1 interrupt flag register 
-Reset value 
-.equ R32_DMA1_INTFCR 
-0x00000000 
-0x40020004 DMA1 interrupt flag clear register 
-.equ R32_DMA1_CFGR1 
-0x00000000 
-0x40020008 DMA1 channel1 configuration register 
-.equ R32_DMA1_CNTR1 
-0x00000000 
-0x4002000C DMA1 channel1 transferred data register 
-.equ R32_DMA1_PADDR1 
-0x00000000 
-0x40020010 DMA1 channel1 peripheral address register 0x00000000 
-.equ R32_DMA1_MADDR1 
-.equ R32_DMA1_CFGR2 
-0x40020014 DMA1 channel1 memory address register 
-0x4002001C DMA1 channel2 configuration register 
-0x00000000 
-.equ R32_DMA1_CNTR2 
-0x00000000 
-0x40020020 DMA1 channel2 transferred data register 
-.equ R32_DMA1_PADDR2 
-0x00000000 
-0x40020024 DMA1 channel2 peripheral address register 0x00000000 
-.equ R32_DMA1_MADDR2 
-.equ R32_DMA1_CFGR3 
-0x40020028 DMA1 channel2 memory address register 
-0x40020030 DMA1 channel3 configuration register 
-0x00000000 
-.equ R32_DMA1_CNTR3 
-0x00000000 
-0x40020034 DMA1 channel3 transferred data register 
-.equ R32_DMA1_PADDR3 
-0x00000000 
-0x40020038 DMA1 channel3 peripheral address register 0x00000000 
-.equ R32_DMA1_MADDR3 
-.equ R32_DMA1_CFGR4 
-0x4002003C DMA1 channel3 memory address register 
-0x40020044 DMA1 channel4 configuration register 
-0x00000000 
+.equ R32_DMA1_INTFR ,0x40020000 
+
+.equ R32_DMA1_INTFCR ,0x40020004 
+.equ R32_DMA1_CFGR1,0x40020008 
+.equ R32_DMA1_CNTR1 ,0x4002000C  
+.equ R32_DMA1_PADDR1, 0x40020010  
+.equ R32_DMA1_MADDR1 ,0x40020014
+.equ R32_DMA1_CFGR2 ,0x4002001C
+
+.equ R32_DMA1_CNTR2 ,0x40020020 
+.equ R32_DMA1_PADDR2 ,0x40020024  
+.equ R32_DMA1_MADDR2 ,0x40020028 
+.equ R32_DMA1_CFGR3 ,0x40020030
+.equ R32_DMA1_CNTR3 , 0x40020034  
+.equ R32_DMA1_PADDR3,0x40020038 
+.equ R32_DMA1_MADDR3 ,0x4002003C
+.equ R32_DMA1_CFGR4 ,0x40020044
+ 
 .equ R32_DMA1_CNTR4 
 0x00000000 
 0x40020048 DMA1 channel4 transferred data register 
