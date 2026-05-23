@@ -294,266 +294,189 @@
 .equ R32_DMA2_MADDR5 ,0x40020464
 .equ R32_DMA2_CFGR6 ,0x4002046C
 .equ R32_DMA2_CNTR6 ,0x40020470
- 
 .equ R32_DMA2_PADDR6 ,0x40020474 
 .equ R32_DMA2_MADDR6 ,0x40020478
-
 .equ R32_DMA2_CFGR7 ,0x40020480
 .equ R32_DMA2_CNTR7 ,0x40020484
- 
 .equ R32_DMA2_PADDR7, 0x40020488
 .equ R32_DMA2_MADDR7, 0x4002048C
-
-R32_DMA2_CFGR8 ,0x40020490
-R32_DMA2_CNTR8 ,0x40020494
-
+.equ R32_DMA2_CFGR8 ,0x40020490
+.equ R32_DMA2_CNTR8 ,0x40020494
 .equ R32_DMA2_PADDR8, 0x40020498
 .equ R32_DMA2_MADDR8 ,0x4002049C
+.equ R32_DMA2_CFGR9 ,0x400204A0
+.equ R32_DMA2_CNTR9 ,0x400204A8
+.equ R32_DMA2_PADDR9 ,0x400204A8 
+.equ R32_ADC1_STATR, 0x40012400  
+.equ R32_ADC1_CTLR1, 0x40012404  
+.equ R32_ADC1_CTLR2, 0x40012408  
+.equ R32_ADC1_SAMPTR1, 0x4001240C  
+.equ R32_ADC1_SAMPTR2, 0x40012410 
+.equ R32_ADC1_IOFR1, 0x40012414  
+.equ R32_ADC1_IOFR2, 0x40012418  
+.equ R32_ADC1_IOFR3, 0x4001241C  
+.equ R32_ADC1_IOFR4, 0x40012420  
+.equ R32_ADC1_WDHTR, 0x40012424 
+.equ R32_ADC1_WDLTR, 0x40012428  
+.equ R32_ADC1_RSQR1, 0x4001242C  
+.equ R32_ADC1_RSQR2, 0x40012430 
+.equ R32_ADC1_RSQR3, 0x40012434 
+.equ R32_ADC1_ISQR, 0x40012438  
+.equ R32_ADC1_IDATAR1, 0x4001243C  
+.equ R32_ADC1_IDATAR2, 0x40012440  
+.equ R32_ADC1_IDATAR3, 0x40012444 
+.equ R32_ADC1_IDATAR4, 0x40012448  
+.equ R32_ADC1_RDATAR, 0x4001244C  
 
-.equ R32_DMA2_CFGR9 
-.equ R32_DMA2_CNTR9 
-0x400204A0 DMA2 channel9 configuration register 
-0x00000000 
-0x400204A4 DMA2 channel9 transferred data register 0x00000000 
-.equ R32_DMA2_PADDR9 
-0x400204A8 DMA2 channel9 peripheral address register 0x00000000 
+.equ R32_ADC2_STATR, 0x40012800 
+.equ R32_ADC2_CTLR1, 0x40012804  
+.equ R32_ADC2_CTLR2, 0x40012808  
+.equ R32_ADC2_SAMPTR1, 0x4001280C 
+.equ R32_ADC2_SAMPTR2, 0x40012810  
+.equ R32_ADC2_IOFR1, 0x40012814  
+.equ R32_ADC2_IOFR2, 0x40012818  
+.equ R32_ADC2_IOFR3, 0x4001281C 
+.equ R32_ADC2_IOFR4, 0x40012820 
+.equ R32_ADC2_WDHTR, 0x40012824  
+.equ R32_ADC2_WDLTR, 0x40012828 
+.equ R32_ADC2_RSQR1, 0x4001282C  
+.equ R32_ADC2_RSQR2, 0x40012830 
+.equ R32_ADC2_RSQR3, 0x40012834  
+.equ R32_ADC2_ISQR, 0x40012838  
+.equ R32_ADC2_IDATAR1, 0x4001283C  
+.equ R32_ADC2_IDATAR2, 0x40012840  
 
-.equ R32_ADC1_STATR 0x40012400 ADC1 status register 0x00000000 
-.equ R32_ADC1_CTLR1 0x40012404 ADC1 control register1 0x00000000 
-.equ R32_ADC1_CTLR2 0x40012408 ADC1 control register 2 0x00000000 
-.equ R32_ADC1_SAMPTR1 0x4001240C ADC1 sample time configuration register1 0x00000000 
-.equ R32_ADC1_SAMPTR2 0x40012410 ADC1 sample time configuration register2 0x00000000 
-.equ R32_ADC1_IOFR1 0x40012414 ADC1 injected channel data offset register1 0x00000000 
-.equ R32_ADC1_IOFR2 0x40012418 ADC1 injected channel data offset register2 0x00000000 
-.equ R32_ADC1_IOFR3 0x4001241C ADC1 injected channel data offset register3 0x00000000 
-.equ R32_ADC1_IOFR4 0x40012420 ADC1 injected channel data offset register4 0x00000000 
-.equ R32_ADC1_WDHTR 0x40012424 ADC1 watchdog high threshold register 0x00000000 
-.equ R32_ADC1_WDLTR 0x40012428 ADC1 watchdog low threshold register 0x00000000 
-.equ R32_ADC1_RSQR1 0x4001242C ADC1 regular channel sequence register1 0x00000000 
-.equ R32_ADC1_RSQR2 0x40012430 ADC1 regular channel sequence register2 0x00000000 
-.equ R32_ADC1_RSQR3 0x40012434 ADC1 regular channel sequence register3 0x00000000 
-.equ R32_ADC1_ISQR 0x40012438 ADC1 injected channel sequence register 0x00000000 
-.equ R32_ADC1_IDATAR1 0x4001243C ADC1 injected data register1 0x00000000 
-.equ R32_ADC1_IDATAR2 0x40012440 ADC1 injected data register2 0x00000000 
-.equ R32_ADC1_IDATAR3 0x40012444 ADC1 injected data register3 0x00000000 
-.equ R32_ADC1_IDATAR4 0x40012448 ADC1 injected data register4 0x00000000 
-.equ R32_ADC1_RDATAR 0x4001244C ADC1 regular data register 0x00000000 
-Table 12-6 ADC2 registers 
-Name Access address Description Reset value 
-.equ R32_ADC2_STATR 0x40012800 ADC2 status register 0x00000000 
-.equ R32_ADC2_CTLR1 0x40012804 ADC2 control register1 0x00000000 
-.equ R32_ADC2_CTLR2 0x40012808 ADC2 control register 2 0x00000000 
-.equ R32_ADC2_SAMPTR1 0x4001280C ADC2 sample time configuration register1 0x00000000 
-.equ R32_ADC2_SAMPTR2 0x40012810 ADC2 sample time configuration register2 0x00000000 
-.equ R32_ADC2_IOFR1 0x40012814 ADC2 injected channel data offset register1 0x00000000 
-.equ R32_ADC2_IOFR2 0x40012818 ADC2 injected channel data offset register2 0x00000000 
-.equ R32_ADC2_IOFR3 0x4001281C ADC2 injected channel data offset register3 0x00000000 
-.equ R32_ADC2_IOFR4 0x40012820 ADC2 injected channel data offset register4 0x00000000 
-.equ R32_ADC2_WDHTR 0x40012824 ADC2 watchdog high threshold register 0x00000000 
-.equ R32_ADC2_WDLTR 0x40012828 ADC2 watchdog low threshold register 0x00000000 
-.equ R32_ADC2_RSQR1 0x4001282C ADC2 regular channel sequence register1 0x00000000 
-.equ R32_ADC2_RSQR2 0x40012830 ADC2 regular channel sequence register2 0x00000000 
-.equ R32_ADC2_RSQR3 0x40012834 ADC2 regular channel sequence register3 0x00000000 
-.equ R32_ADC2_ISQR 0x40012838 ADC2 injected channel sequence register 0x00000000 
-.equ R32_ADC2_IDATAR1 0x4001283C ADC2 injected data register1 0x00000000 
-.equ R32_ADC2_IDATAR2 0x40012840 ADC2 injected data register2 0x00000000 
-
-.equ R32_ADC2_IDATAR3 0x40012844 ADC2 injected data register3 0x00000000 
-.equ R32_ADC2_IDATAR4 0x40012848 ADC2 injected data register4 0x00000000 
-.equ R32_ADC2_RDATAR 0x4001284C ADC2 regular data register 0x00000000 
-
-
-.equ R32_TKEY1_CHARGE1 
-0x4001240C 
-TKEY charge sample time register1 
-Reset value 
-.equ R32_TKEY1_CHARGE2 
-0x00000000 
-0x40012410 
-TKEY charge sample time register2 
-.equ R32_TKEY1_CHGOFFSET 0x4001243C TKEY charge time offset register 
-.equ R32_TKEY1_ACT_DCG 
-0x4001244C 
-0x00000000 
-0x00000000 
-TKEY activate and discharge time 
-register 
-.equ R32_TKEY1_DR 
-X 
-0x4001244C 
-TKEY data register 
-Table 13-2 TKEY2 registers 
-Name 
-Access address 
-Description 
-X 
-.equ R32_TKEY2_CHARGE1 
-Reset value 
-0x4001280C 
-TKEY charge sample time register1 
-.equ R32_TKEY2_CHARGE2 
-0x00000000 
-0x40012810 
-TKEY charge sample time register2 
-.equ R32_TKEY2_CHGOFFSET 0x4001283C TKEY charge time offset register 
-.equ R32_TKEY2_ACT_DCG 
-0x4001284C 
-0x00000000 
-0x00000000 
-TKEY activate and discharge time 
-register 
-.equ R32_TKEY2_DR 
-X 
-0x4001284C 
-TKEY data register 
-
-.equ R16_TIM1_CTLR1 0x40012C00 Control register1 0x0000 
-.equ R16_TIM1_CTLR2 0x40012C04 Control register2 0x0000 
-.equ R16_TIM1_SMCFGR 0x40012C08 Slave mode configuration register 0x0000 
-.equ R16_TIM1_DMAINTENR 0x40012C0C DMA/interrupt enable register 0x0000 
-.equ R16_TIM1_INTFR 0x40012C10 Interrupt flag register 0x0000 
-.equ R16_TIM1_SWEVGR 0x40012C14 Event generation register 0x0000 
-.equ R16_TIM1_CHCTLR1 0x40012C18 Compare/capture control register1 0x0000 
-.equ R16_TIM1_CHCTLR2 0x40012C1C Compare/capture control register2 0x0000 
-.equ R16_TIM1_CCER 0x40012C20 Compare/capture enable register 0x0000 
-.equ R16_TIM1_CNT 0x40012C24 Counter 0x0000 
-.equ R16_TIM1_PSC 0x40012C28 Prescaler 0x0000 
-.equ R16_TIM1_ATRLR 0x40012C2C Auto-reload register 0x0000 
-.equ R16_TIM1_RPTCR 0x40012C30 Repeat count register 0x0000 
+.equ R32_ADC2_IDATAR3, 0x40012844  
+.equ R32_ADC2_IDATAR4, 0x40012848  
+.equ R32_ADC2_RDATAR, 0x4001284C 
+.equ R32_TKEY1_CHARGE1,0x4001240C 
+.equ R32_TKEY1_CHARGE2 ,0x40012410 
+.equ R32_TKEY1_CHGOFFSET, 0x4001243C 
+.equ R32_TKEY1_ACT_DCG ,0x4001244C 
+.equ R32_TKEY1_DR,0x4001244C 
+.equ R32_TKEY2_CHARGE1,0x4001280C 
+.equ R32_TKEY2_CHARGE2,0x40012810 
+.equ R32_TKEY2_CHGOFFSET, 0x4001283C  
+.equ R32_TKEY2_ACT_DCG,0x4001284C 
+.equ R32_TKEY2_DR,0x4001284C 
+.equ R16_TIM1_CTLR1, 0x40012C00 
+.equ R16_TIM1_CTLR2, 0x40012C04  
+.equ R16_TIM1_SMCFGR, 0x40012C08 
+.equ R16_TIM1_DMAINTENR, 0x40012C0C  
+.equ R16_TIM1_INTFR, 0x40012C10 
+.equ R16_TIM1_SWEVGR, 0x40012C14  
+.equ R16_TIM1_CHCTLR1, 0x40012C18 
+.equ R16_TIM1_CHCTLR2, 0x40012C1C  
+.equ R16_TIM1_CCER, 0x40012C20  
+.equ R16_TIM1_CNT, 0x40012C24 
+.equ R16_TIM1_PSC, 0x40012C28 
+.equ R16_TIM1_ATRLR, 0x40012C2C  
+.equ R16_TIM1_RPTCR, 0x40012C30  
 
 
-.equ R16_TIM1_CH1CVR 0x40012C34 Compare/capture register1 0x0000 
-.equ R16_TIM1_CH2CVR 0x40012C38 Compare/capture register2 0x0000 
-.equ R16_TIM1_CH3CVR 0x40012C3C Compare/capture register3 0x0000 
-.equ R16_TIM1_CH4CVR 0x40012C40 Compare/capture register4 0x0000 
-.equ R16_TIM1_BDTR 0x40012C44 Break and dead zone register 0x0000 
-.equ R16_TIM1_DMACFGR 0x40012C48 DMA configuration register 0x0000 
-.equ R16_TIM1_DMAADR 0x40012C4C DMA address register in continuous mode 0x0000 
-Table 14-4 TIM8 registers 
-Name Access address Description Reset value 
-.equ R16_TIM8_CTLR1 0x40013400 Control register1 0x0000 
-.equ R16_TIM8_CTLR2 0x40013404 Control register2 0x0000 
-.equ R16_TIM8_SMCFGR 0x40013408 Slave mode configuration register 0x0000 
-.equ R16_TIM8_DMAINTENR 0x4001340C DMA/interrupt enable register 0x0000 
-.equ R16_TIM8_INTFR 0x40013410 Interrupt flag register 0x0000 
-.equ R16_TIM8_SWEVGR 0x40013414 Event generation register 0x0000 
-.equ R16_TIM8_CHCTLR1 0x40013418 Compare/capture control register1 0x0000 
-.equ R16_TIM8_CHCTLR2 0x4001341C Compare/capture control register2 0x0000 
-.equ R16_TIM8_CCER 0x40013420 Compare/capture enable register 0x0000 
-.equ R16_TIM8_CNT 0x40013424 Counter 0x0000 
-.equ R16_TIM8_PSC 0x40013428 Prescaler 0x0000 
-.equ R16_TIM8_ATRLR 0x4001342C Auto-reload register 0x0000 
-.equ R16_TIM8_RPTCR 0x40013430 Repeat count register 0x0000 
-.equ R16_TIM8_CH1CVR 0x40013434 Compare/capture register1 0x0000 
-.equ R16_TIM8_CH2CVR 0x40013438 Compare/capture register2 0x0000 
-.equ R16_TIM8_CH3CVR 0x4001343C Compare/capture register3 0x0000 
-.equ R16_TIM8_CH4CVR 0x40013440 Compare/capture register4 0x0000 
-.equ R16_TIM8_BDTR 0x40013444 Break and dead zone register 0x0000 
-.equ R16_TIM8_DMACFGR 0x40013448 DMA configuration register 0x0000 
-.equ R16_TIM8_DMAADR 0x4001344C DMA address register in continuous 
-mode 0x0000 
-Table 14-5 TIM9 registers 
-Name Access address Description Reset value 
-.equ R16_TIM9_CTLR1 0x40014C00 Control register1 0x0000 
-.equ R16_TIM9_CTLR2 0x40014C04 Control register2 0x0000 
-.equ R16_TIM9_SMCFGR 0x40014C08 Slave mode configuration register 0x0000 
-.equ R16_TIM9_DMAINTENR 0x40014C0C DMA/interrupt enable register 0x0000 
-.equ R16_TIM9_INTFR 0x40014C10 Interrupt flag register 0x0000 
-.equ R16_TIM9_SWEVGR 0x40014C14 Event generation register 0x0000 
-.equ R16_TIM9_CHCTLR1 0x40014C18 Compare/capture control register1 0x0000 
-.equ R16_TIM9_CHCTLR2 0x40014C1C Compare/capture control register2 0x0000 
-.equ R16_TIM9_CCER 0x40014C20 Compare/capture enable register 0x0000 
-.equ R16_TIM9_CNT 0x40014C24 Counter 0x0000 
-
-
-.equ R16_TIM9_PSC 0x40014C28 Prescaler 0x0000 
-.equ R16_TIM9_ATRLR 0x40014C2C Auto-reload register 0x0000 
-.equ R16_TIM9_RPTCR 0x40014C30 Repeat count register 0x0000 
-.equ R16_TIM9_CH1CVR 0x40014C34 Compare/capture register1 0x0000 
-.equ R16_TIM9_CH2CVR 0x40014C38 Compare/capture register2 0x0000 
-.equ R16_TIM9_CH3CVR 0x40014C3C Compare/capture register3 0x0000 
-.equ R16_TIM9_CH4CVR 0x40014C40 Compare/capture register4 0x0000 
-.equ R16_TIM9_BDTR 0x40014C44 Break and dead zone register 0x0000 
-.equ R16_TIM9_DMACFGR 0x40014C48 DMA configuration register 0x0000 
-.equ R16_TIM9_DMAADR 0x40014C4C DMA address register in continuous 
-mode 0x0000 
-Table 14-6 TIM10 registers 
-Name Access address Description Reset value 
-.equ R16_TIM10_CTLR1 0x40015000 Control register1 0x0000 
-.equ R16_TIM10_CTLR2 0x40015004 Control register2 0x0000 
-.equ R16_TIM10_SMCFGR 0x40015008 Slave mode configuration register 0x0000 
-.equ R16_TIM10_DMAINTENR 0x4001500C DMA/interrupt enable register 0x0000 
-.equ R16_TIM10_INTFR 0x40015010 Interrupt flag register 0x0000 
-.equ R16_TIM10_SWEVGR 0x40015014 Event generation register 0x0000 
-.equ R16_TIM10_CHCTLR1 0x40015018 Compare/capture control register1 0x0000 
-.equ R16_TIM10_CHCTLR2 0x4001501C Compare/capture control register2 0x0000 
-.equ R16_TIM10_CCER 0x40015020 Compare/capture enable register 0x0000 
-.equ R16_TIM10_CNT 0x40015024 Counter 0x0000 
-.equ R16_TIM10_PSC 0x40015028 Prescaler 0x0000 
-.equ R16_TIM10_ATRLR 0x4001502C Auto-reload register 0x0000 
-.equ R16_TIM10_RPTCR 0x40015030 Repeat count register 0x0000 
-.equ R16_TIM10_CH1CVR 0x40015034 Compare/capture register1 0x0000 
-.equ R16_TIM10_CH2CVR 0x40015038 Compare/capture register2 0x0000 
-.equ R16_TIM10_CH3CVR 0x4001503C Compare/capture register3 0x0000 
-.equ R16_TIM10_CH4CVR 0x40015040 Compare/capture register4 0x0000 
-.equ R16_TIM10_BDTR 0x40015044 Break and dead zone register 0x0000 
-.equ R16_TIM10_DMACFGR 0x40015048 DMA configuration register 0x0000 
-.equ R16_TIM10_DMAADR 0x4001504C DMA address register in continuous mode 0x0000
-
-
-
-.equ R16_TIM2_CTLR1 0x40000000 TIM2 control register1 0x0000 
-.equ R16_TIM2_CTLR2 0x40000004 TIM2 control register2 0x0000 
-.equ R16_TIM2_SMCFGR 0x40000008 TIM2 slave mode configuration 
-register 0x0000 
-.equ R16_TIM2_DMAINTENR 0x4000000C TIM2 DMA/interrupt enable 
-register  0x0000 
-.equ R16_TIM2_INTFR 0x40000010 TIM2 interrupt flag register 0x0000 
-CH32FV2x_V3x Reference Manual  http://wch.cn 
-V1.7 225     
-.equ R16_TIM2_SWEVGR 0x40000014 TIM2 event generation register 0x0000 
-.equ R16_TIM2_CHCTLR1 0x40000018 TIM2 compare/capture control 
-register1 0x0000 
-.equ R16_TIM2_CHCTLR2 0x4000001C TIM2 compare/capture control 
-register2 0x0000 
-.equ R16_TIM2_CCER 0x40000020 TIM2 compare/capture enable register 0x0000 
-.equ R16_TIM2_CNT 0x40000024 TIM2 counter 0x0000 
-.equ R16_TIM2_PSC 0x40000028 TIM2 prescaler 0x0000 
-.equ R16_TIM2_ATRLR 0x4000002C TIM2 auto-reload register 0x0000 
-.equ R16_TIM2_CH1CVR 0x40000034 TIM2 compare/capture register1 0x0000 
-.equ R16_TIM2_CH2CVR 0x40000038 TIM2 compare/capture register2 0x0000 
-.equ R16_TIM2_CH3CVR 0x4000003C TIM2 compare/capture register3 0x0000 
-.equ R16_TIM2_CH4CVR 0x40000040 TIM2 compare/capture register4 0x0000 
-.equ R16_TIM2_DMACFGR 0x40000048 TIM2 DMA configuration register 0x0000 
-.equ R16_TIM2_DMAADR 0x4000004C TIM2 DMA address register in 
-continuous mode 0x0000 
-Table 15-4 TIM3 registers 
-Name Offset address Description Reset value 
-.equ R16_TIM3_CTLR1 0x40000400 TIM3 control register1 0x0000 
-.equ R16_TIM3_CTLR2 0x40000404 TIM3 control register2 0x0000 
-.equ R16_TIM3_SMCFGR 0x40000408 TIM3 slave mode configuration 
-register 0x0000 
-.equ R16_TIM3_DMAINTENR 0x4000040C TIM3 DMA/interrupt enable 
-register  0x0000 
-.equ R16_TIM3_INTFR 0x40000410 TIM3 interrupt flag register 0x0000 
-.equ R16_TIM3_SWEVGR 0x40000414 TIM3 event generation register 0x0000 
-.equ R16_TIM3_CHCTLR1 0x40000418 TIM3 compare/capture control 
-register1 0x0000 
-.equ R16_TIM3_CHCTLR2 0x4000041C TIM3 compare/capture control 
-register2 0x0000 
-.equ R16_TIM3_CCER 0x40000420 TIM3 compare/capture enable register 0x0000 
-.equ R16_TIM3_CNT 0x40000424 TIM3 counter 0x0000 
-.equ R16_TIM3_PSC 0x40000428 TIM3 prescaler 0x0000 
-.equ R16_TIM3_ATRLR 0x4000042C TIM3 auto reload register 0x0000 
-.equ R16_TIM3_CH1CVR 0x40000434 TIM3 compare/capture register1 0x0000 
-.equ R16_TIM3_CH2CVR 0x40000438 TIM3 compare/capture register2 0x0000 
-.equ R16_TIM3_CH3CVR 0x4000043C TIM3 compare/capture register3 0x0000 
-.equ R16_TIM3_CH4CVR 0x40000440 TIM3 compare/capture register4 0x0000 
-.equ R16_TIM3_DMACFGR 0x40000448 TIM3 DMA configuration register 0x0000 
-.equ R16_TIM3_DMAADR 0x4000044C TIM3 DMA address register in 
-continuous mode 0x0000 
-
-
+.equ R16_TIM1_CH1CVR, 0x40012C34  
+.equ R16_TIM1_CH2CVR, 0x40012C38
+.equ R16_TIM1_CH3CVR, 0x40012C3C  
+.equ R16_TIM1_CH4CVR, 0x40012C40  
+.equ R16_TIM1_BDTR, 0x40012C44  
+.equ R16_TIM1_DMACFGR, 0x40012C48  
+.equ R16_TIM1_DMAADR, 0x40012C4C 
+.equ R16_TIM8_CTLR1, 0x40013400 
+.equ R16_TIM8_CTLR2, 0x40013404  
+.equ R16_TIM8_SMCFGR, 0x40013408 
+.equ R16_TIM8_DMAINTENR, 0x4001340C 
+.equ R16_TIM8_INTFR, 0x40013410 
+.equ R16_TIM8_SWEVGR, 0x40013414  
+.equ R16_TIM8_CHCTLR1, 0x40013418  
+.equ R16_TIM8_CHCTLR2, 0x4001341C 
+.equ R16_TIM8_CCER, 0x40013420 
+.equ R16_TIM8_CNT, 0x40013424 
+.equ R16_TIM8_PSC, 0x40013428 
+.equ R16_TIM8_ATRLR, 0x4001342C 
+.equ R16_TIM8_RPTCR, 0x40013430  
+.equ R16_TIM8_CH1CVR, 0x40013434 
+.equ R16_TIM8_CH2CVR, 0x40013438  
+.equ R16_TIM8_CH3CVR, 0x4001343C 
+.equ R16_TIM8_CH4CVR, 0x40013440  
+.equ R16_TIM8_BDTR, 0x40013444  
+.equ R16_TIM8_DMACFGR, 0x40013448 
+.equ R16_TIM8_DMAADR, 0x4001344C 
+.equ R16_TIM9_CTLR1, 0x40014C00 
+.equ R16_TIM9_CTLR2, 0x40014C04 
+.equ R16_TIM9_SMCFGR, 0x40014C08  
+.equ R16_TIM9_DMAINTENR, 0x40014C0C 
+.equ R16_TIM9_INTFR, 0x40014C10 
+.equ R16_TIM9_SWEVGR, 0x40014C14  
+.equ R16_TIM9_CHCTLR1, 0x40014C18  
+.equ R16_TIM9_CHCTLR2, 0x40014C1C  
+.equ R16_TIM9_CCER, 0x40014C20 
+.equ R16_TIM9_CNT, 0x40014C24 
+.equ R16_TIM9_PSC, 0x40014C28  
+.equ R16_TIM9_ATRLR, 0x40014C2C  
+.equ R16_TIM9_RPTCR, 0x40014C30  
+.equ R16_TIM9_CH1CVR, 0x40014C34 
+.equ R16_TIM9_CH2CVR, 0x40014C38  
+.equ R16_TIM9_CH3CVR, 0x40014C3C  
+.equ R16_TIM9_CH4CVR, 0x40014C40  
+.equ R16_TIM9_BDTR, 0x40014C44 
+.equ R16_TIM9_DMACFGR, 0x40014C48  
+.equ R16_TIM9_DMAADR, 0x40014C4C  
+.equ R16_TIM10_CTLR1, 0x40015000  
+.equ R16_TIM10_CTLR2, 0x40015004 
+.equ R16_TIM10_SMCFGR, 0x40015008 
+.equ R16_TIM10_DMAINTENR, 0x4001500C  
+.equ R16_TIM10_INTFR, 0x40015010  
+.equ R16_TIM10_SWEVGR, 0x40015014  
+.equ R16_TIM10_CHCTLR1, 0x40015018 
+.equ R16_TIM10_CHCTLR2, 0x4001501C
+.equ R16_TIM10_CCER, 0x40015020 
+.equ R16_TIM10_CNT, 0x40015024 
+.equ R16_TIM10_PSC, 0x40015028 
+.equ R16_TIM10_ATRLR, 0x4001502C 
+.equ R16_TIM10_RPTCR, 0x40015030 
+.equ R16_TIM10_CH1CVR, 0x40015034 
+.equ R16_TIM10_CH2CVR, 0x40015038 
+.equ R16_TIM10_CH3CVR, 0x4001503C 
+.equ R16_TIM10_CH4CVR, 0x40015040  
+.equ R16_TIM10_BDTR, 0x40015044  
+.equ R16_TIM10_DMACFGR, 0x40015048 
+.equ R16_TIM10_DMAADR, 0x4001504C 
+.equ R16_TIM2_CTLR1, 0x40000000 
+.equ R16_TIM2_CTLR2, 0x40000004 
+.equ R16_TIM2_SMCFGR, 0x40000008 
+.equ R16_TIM2_DMAINTENR, 0x4000000C 
+.equ R16_TIM2_INTFR, 0x40000010 
+.equ R16_TIM2_SWEVGR, 0x40000014  
+.equ R16_TIM2_CHCTLR1, 0x40000018  
+.equ R16_TIM2_CHCTLR2, 0x4000001C 
+.equ R16_TIM2_CCER, 0x40000020  
+.equ R16_TIM2_CNT, 0x40000024
+.equ R16_TIM2_PSC, 0x40000028
+.equ R16_TIM2_ATRLR, 0x4000002C
+.equ R16_TIM2_CH1CVR, 0x40000034 
+.equ R16_TIM2_CH2CVR, 0x40000038
+.equ R16_TIM2_CH3CVR, 0x4000003C 
+.equ R16_TIM2_CH4CVR, 0x40000040 
+.equ R16_TIM2_DMACFGR, 0x40000048  
+.equ R16_TIM2_DMAADR, 0x4000004C 
+.equ R16_TIM3_CTLR1, 0x40000400  
+.equ R16_TIM3_CTLR2, 0x40000404 
+.equ R16_TIM3_SMCFGR, 0x40000408 
+.equ R16_TIM3_DMAINTENR, 0x4000040C 
+.equ R16_TIM3_INTFR, 0x40000410 
+.equ R16_TIM3_SWEVGR, 0x40000414 
+.equ R16_TIM3_CHCTLR1, 0x40000418
+.equ R16_TIM3_CHCTLR2, 0x4000041C 
+.equ R16_TIM3_CCER, 0x40000420 
+.equ R16_TIM3_CNT, 0x40000424 
+.equ R16_TIM3_PSC, 0x40000428 
+.equ R16_TIM3_ATRLR, 0x4000042C 
+.equ R16_TIM3_CH1CVR, 0x40000434 
+.equ R16_TIM3_CH2CVR, 0x40000438
+.equ R16_TIM3_CH3CVR, 0x4000043C 
+.equ R16_TIM3_CH4CVR, 0x40000440  
+.equ R16_TIM3_DMACFGR, 0x40000448  
+.equ R16_TIM3_DMAADR, 0x4000044C  
 .equ R16_TIM4_CTLR1 0x40000800 TIM4 control register1 0x0000 
 .equ R16_TIM4_CTLR2 0x40000804 TIM4 control register2 0x0000 
 .equ R16_TIM4_SMCFGR 0x40000808 TIM4 slave mode configuration 
