@@ -200,12 +200,8 @@
 .equ R32_DMA1_MADDR3 ,0x4002003C
 .equ R32_DMA1_CFGR4 ,0x40020044
  
-.equ R32_DMA1_CNTR4 
-0x00000000 
-0x40020048 DMA1 channel4 transferred data register 
-.equ R32_DMA1_PADDR4 
-0x00000000 
-0x4002004C DMA1 channel4 peripheral address register 0x00000000 
+.equ R32_DMA1_CNTR4 ,0x40020048  
+.equ R32_DMA1_PADDR4 ,0x4002004C 
 .equ R32_DMA1_MADDR4 
 .equ R32_DMA1_CFGR5 
 0x40020050 DMA1 channel4 memory address register 
