@@ -674,189 +674,104 @@
 .equ R16_USBD_COUNT1_TX, 0x40006014+[USBD_BTABLE]
 .equ R16_USBD_ADDR1_RX, 0x40006018+[USBD_BTABLE] 
 
-.equ R16_USBD_COUNT1_RX 0x4000601C+[USBD_BTABLE] Endpoint receive byte count 
-register1 0x0000 
-.equ R16_USBD_ADDR2_TX 0x40006020+[USBD_BTABLE] Endpoint transmit buffer address 
-register2 0x0000 
-.equ R16_USBD_COUNT2_TX 0x40006024+[USBD_BTABLE] Endpoint transmit byte count 
-register2 0x0000 
-.equ R16_USBD_ADDR2_RX 0x40006028+[USBD_BTABLE] Endpoint receive buffer address 
-register2 0x0000 
-.equ R16_USBD_COUNT2_RX 0x4000602C+[USBD_BTABLE] Endpoint receive byte count 
-register2 0x0000 
-.equ R16_USBD_ADDR3_TX 0x40006030+[USBD_BTABLE] Endpoint transmit buffer address 
-register3 0x0000 
-.equ R16_USBD_COUNT3_TX 0x40006034+[USBD_BTABLE] Endpoint transmit byte count 
-register3 0x0000 
-.equ R16_USBD_ADDR3_RX 0x40006038+[USBD_BTABLE] Endpoint receive buffer address 
-register3 0x0000 
-.equ R16_USBD_COUNT3_RX 0x4000603C+[USBD_BTABLE] Endpoint receive byte count 
-register3 0x0000 
-.equ R16_USBD_ADDR4_TX 0x40006040+[USBD_BTABLE] Endpoint transmit buffer address 
-register4 0x0000 
-.equ R16_USBD_COUNT4_TX 0x40006044+[USBD_BTABLE] Endpoint transmit byte count 
-register4 0x0000 
-.equ R16_USBD_ADDR4_RX 0x40006048+[USBD_BTABLE] Endpoint receive buffer address 
-register4 0x0000 
-.equ R16_USBD_COUNT4_RX 0x4000604C+[USBD_BTABLE] Endpoint receive byte count 
-register4 0x0000 
-.equ R16_USBD_ADDR5_TX 0x40006050+[USBD_BTABLE] Endpoint transmit buffer address 
-register5 0x0000 
-.equ R16_USBD_COUNT5_TX 0x40006054+[USBD_BTABLE] Endpoint transmit byte count 
-register 5 0x0000 
-.equ R16_USBD_ADDR5_RX 0x40006058+[USBD_BTABLE] Endpoint receive buffer address 
-register5 0x0000 
-.equ R16_USBD_COUNT5_RX 0x4000605C+[USBD_BTABLE] Endpoint receive byte count 
-register5 0x0000 
-.equ R16_USBD_ADDR6_TX 0x40006060+[USBD_BTABLE] Endpoint transmit buffer address 
-register6 0x0000 
-.equ R16_USBD_COUNT6_TX 0x40006064+[USBD_BTABLE] Endpoint transmit byte count 
-register6 0x0000 
-.equ R16_USBD_ADDR6_RX 0x40006068+[USBD_BTABLE] Endpoint receive buffer address 
-register6 0x0000 
-.equ R16_USBD_COUNT6_RX 0x4000606C+[USBD_BTABLE] Endpoint receive byte count 
-register6 0x0000 
-.equ R16_USBD_ADDR7_TX 0x40006070+[USBD_BTABLE] Endpoint transmit buffer address 
-register7 0x0000 
-.equ R16_USBD_COUNT7_TX 0x40006074+[USBD_BTABLE] Endpoint transmit byte count 0x0000 
-CH32FV2x_V3x Reference Manual  http://wch.cn 
-V1.7 332     
-register7 
-.equ R16_USBD_ADDR7_RX 0x40006078+[USBD_BTABLE] Endpoint receive buffer address 
-register7 0x0000 
-.equ R16_USBD_COUNT7_RX 0x4000607C+[USBD_BTABLE] Endpoint receive byte count 
-register7 0x0000
-
-
-.equ R8_USB_CTRL 
-Reset value 
-0x40023400 
-USB control register 
-.equ R8_USB_INT_EN 
-0x06 
-0x40023402 
-USB interrupt enable register 
-.equ R8_USB_DEV_AD 
-0 
-0x40023403 
-USB device address register 
-.equ R16_USB_FRAME_NO 
-0 
-0x40023404 
-USB frame number register 
-.equ R8_USB_SUSPEND 
-0 
-0x40023406 
-USB suspend register 
-.equ R8_USB_SPPED_TYPE 
-0 
-0x40023408 
-USB current speed type register 
-.equ R8_USB_MIS_ST 
-0 
-0x40023409 
-USB miscellaneous status register 
-.equ R8_USB_INT_FG 
-xx10_1000b 
-0x4002340A 
-USB interrupt flag register 
-.equ R8_USB_INT_ST 
-0 
-0x4002340B 
-USB interrupt status register 
-.equ R16_USB_RX_LEN 
-00xx_xxxxb 
-0x4002340C 
-USB receive length register 
-xx 
-
-
-
-
-
-.equ R32_UEP_CONFIG 0x40023410 Endpoint enable configuration register 00000000h 
-.equ R32_UEP_TYPE 0x40023414 Endpoint type configuration register 00000000h 
-.equ R32_UEP_BUF_MOD 0x40023418 Endpoint buffer mode register 00000000h 
-.equ R32_UEP0_DMA 0x4002341C Endpoint0 buffer start address xxxxh 
-.equ R32_UEP1_RX_DMA 0x40023420 Endpoint1 receive buffer start address xxxxh 
-.equ R32_UEP2_RX_DMA 0x40023424 Endpoint2 receive buffer start address xxxxh 
-.equ R32_UEP3_RX_DMA 0x40023428 Endpoint3 receive buffer start address xxxxh 
-.equ R32_UEP4_RX_DMA 0x4002342C Endpoint4 receive buffer start address xxxxh 
-.equ R32_UEP5_RX_DMA 0x40023430 Endpoint5 receive buffer start address xxxxh 
-.equ R32_UEP6_RX_DMA 0x40023434 Endpoint6 receive buffer start address xxxxh 
-.equ R32_UEP7_RX_DMA 0x40023438 Endpoint7 receive buffer start address xxxxh 
-.equ R32_UEP8_RX_DMA 0x4002343C Endpoint8 receive buffer start address xxxxh 
-.equ R32_UEP9_RX_DMA 0x40023440 Endpoint9 receive buffer start address xxxxh 
-.equ R32_UEP10_RX_DMA 0x40023444 Endpoint10 receive buffer start address xxxxh 
-.equ R32_UEP11_RX_DMA 0x40023448 Endpoint11 receive buffer start address xxxxh 
-.equ R32_UEP12_RX_DMA 0x4002344C Endpoint12 receive buffer start address xxxxh 
-.equ R32_UEP13_RX_DMA 0x40023450 Endpoint13 receive buffer start address xxxxh 
-.equ R32_UEP14_RX_DMA 0x40023454 Endpoint14 receive buffer start address xxxxh 
-.equ R32_UEP15_RX_DMA 0x40023458 Endpoint15 receive buffer start address xxxxh 
-.equ R32_UEP1_TX_DMA 0x4002345C Endpoint1 transmit buffer start address xxxxh 
-.equ R32_UEP2_TX_DMA 0x40023460 Endpoint2 transmit buffer start address xxxxh 
-.equ R32_UEP3_TX_DMA 0x40023464 Endpoint3 transmit buffer start address xxxxh 
-.equ R32_UEP4_TX_DMA 0x40023468 Endpoint4 transmit buffer start address xxxxh 
-CH32FV2x_V3x Reference Manual  http://wch.cn 
-V1.7 353     
-.equ R32_UEP5_TX_DMA 0x4002346C Endpoint5 transmit buffer start address xxxxh 
-.equ R32_UEP6_TX_DMA 0x40023470 Endpoint6 transmit buffer start address xxxxh 
-.equ .equ R32_UEP7_TX_DMA 0x40023474 Endpoint7 transmit buffer start address xxxxh 
-.equ R32_UEP8_TX_DMA 0x40023478 Endpoint8 transmit buffer start address xxxxh 
-.equ R32_UEP9_TX_DMA 0x4002347C Endpoint9 transmit buffer start address xxxxh 
-.equ R32_UEP10_TX_DMA 0x40023480 Endpoint10 transmit buffer start address xxxxh 
-.equ R32_UEP11_TX_DMA 0x40023484 Endpoint11 transmit buffer start address xxxxh 
-.equ R32_UEP12_TX_DMA 0x40023488 Endpoint12 transmit buffer start address xxxxh 
-.equ R32_UEP13_TX_DMA 0x4002348C Endpoint13 transmit buffer start address xxxxh 
-.equ R32_UEP14_TX_DMA 0x40023490 Endpoint14 transmit buffer start address xxxxh 
-.equ R32_UEP15_TX_DMA 0x40023494 Endpoint15 transmit buffer start address xxxxh 
-.equ R16_UEP0_MAX_LEN 0x40023498 Endpoint0 maximum length packet 
-register xxxxh 
-.equ R16_UEP1_MAX_LEN 0x4002349C Endpoint1 maximum length packet 
-register xxxxh 
-.equ R16_UEP2_MAX_LEN 0x400234A0 Endpoint2 maximum length packet 
-register xxxxh 
-.equ R16_UEP3_MAX_LEN 0x400234A4 Endpoint3 maximum length packet 
-register xxxxh 
-.equ R16_UEP4_MAX_LEN 0x400234A8 Endpoint4 maximum length packet 
-register xxxxh 
-.equ R16_UEP5_MAX_LEN 0x400234AC Endpoint5 maximum length packet 
-register xxxxh 
-.equ R16_UEP6_MAX_LEN 0x400234B0 Endpoint6 maximum length packet 
-register xxxxh 
-.equ R16_UEP7_MAX_LEN 0x400234B4 Endpoint7 maximum length packet 
-register xxxxh 
-.equ R16_UEP8_MAX_LEN 0x400234B8 Endpoint8 maximum length packet 
-register xxxxh 
-.equ R16_UEP9_MAX_LEN 0x400234BC Endpoint9 maximum length packet 
-register xxxxh 
-.equ R16_UEP10_MAX_LEN 0x400234C0 Endpoint10 maximum length packet 
-register xxxxh 
-.equ R16_UEP11_MAX_LEN 0x400234C4 Endpoint11 maximum length packet 
-register xxxxh 
-.equ R16_UEP12_MAX_LEN 0x400234C8 Endpoint12 maximum length packet 
-register xxxxh 
-.equ R16_UEP13_MAX_LEN 0x400234CC Endpoint13 maximum length packet 
-register xxxxh 
-.equ R16_UEP14_MAX_LEN 0x400234D0 Endpoint14 maximum length packet 
-register xxxxh 
-.equ R16_UEP15_MAX_LEN 0x400234D4 Endpoint15 maximum length packet 
-register xxxxh 
-.equ R16_UEP0_T_LEN 0x400234D8 Endpoint0 transmit length register xxxxh 
-.equ R8_UEP0_TX_CTRL 0x400234DA Endpoint0 transmit control register 00h 
-CH32FV2x_V3x Reference Manual  http://wch.cn 
-V1.7 354     
-.equ R8_UEP0_RX_CTRL 0x400234DB Endpoint0 receive control register 00h 
-.equ R16_UEP1_T_LEN 0x400234DC Endpoint1 transmit length register xxxxh 
-.equ R8_UEP1_TX_CTRL 0x400234DE Endpoint1 transmit control register 00h 
-.equ R8_UEP1_RX_CTRL 0x400234DF Endpoint1 receive control register 00h 
-.equ R16_UEP2_T_LEN 0x400234E0 Endpoint2 transmit length register xxxxh 
-.equ R8_UEP2_TX_CTRL 0x400234E2 Endpoint2 transmit control register 00h 
-.equ R8_UEP2_RX_CTRL 0x400234E3 Endpoint2 receive control register 00h 
-.equ R16_UEP3_T_LEN 0x400234E4 Endpoint3 transmit length register xxxxh 
-.equ R8_UEP3_TX_CTRL 0x400234E6 Endpoint3 transmit control register 00h 
-.equ R8_UEP3_RX_CTRL 0x400234E7 Endpoint3 receive control register 00h 
-.equ R16_UEP4_T_LEN 0x400234E8 Endpoint4 transmit length register xxxxh 
+.equ R16_USBD_COUNT1_RX, 0x4000601C+[USBD_BTABLE] 
+.equ R16_USBD_ADDR2_TX, 0x40006020+[USBD_BTABLE] 
+.equ R16_USBD_COUNT2_TX, 0x40006024+[USBD_BTABLE]
+.equ R16_USBD_ADDR2_RX, 0x40006028+[USBD_BTABLE] 
+.equ R16_USBD_COUNT2_RX, 0x4000602C+[USBD_BTABLE] 
+.equ R16_USBD_ADDR3_TX, 0x40006030+[USBD_BTABLE] 
+.equ R16_USBD_COUNT3_TX, 0x40006034+[USBD_BTABLE] 
+.equ R16_USBD_ADDR3_RX, 0x40006038+[USBD_BTABLE] 
+.equ R16_USBD_COUNT3_RX, 0x4000603C+[USBD_BTABLE] 
+.equ R16_USBD_ADDR4_TX, 0x40006040+[USBD_BTABLE] 
+.equ R16_USBD_COUNT4_TX, 0x40006044+[USBD_BTABLE] 
+.equ R16_USBD_ADDR4_RX, 0x40006048+[USBD_BTABLE] 
+.equ R16_USBD_COUNT4_RX, 0x4000604C+[USBD_BTABLE] 
+.equ R16_USBD_ADDR5_TX, 0x40006050+[USBD_BTABLE] 
+.equ R16_USBD_COUNT5_TX, 0x40006054+[USBD_BTABLE] 
+.equ R16_USBD_ADDR5_RX, 0x40006058+[USBD_BTABLE] 
+.equ R16_USBD_COUNT5_RX, 0x4000605C+[USBD_BTABLE] 
+.equ R16_USBD_ADDR6_TX, 0x40006060+[USBD_BTABLE] 
+.equ R16_USBD_COUNT6_TX, 0x40006064+[USBD_BTABLE] 
+.equ R16_USBD_ADDR6_RX, 0x40006068+[USBD_BTABLE] 
+.equ R16_USBD_COUNT6_RX, 0x4000606C+[USBD_BTABLE] 
+.equ R16_USBD_ADDR7_TX, 0x40006070+[USBD_BTABLE] 
+.equ R16_USBD_COUNT7_TX, 0x40006074+[USBD_BTABLE] 
+.equ R16_USBD_ADDR7_RX, 0x40006078+[USBD_BTABLE] 
+.equ R16_USBD_COUNT7_RX, 0x4000607C+[USBD_BTABLE] 
+.equ R8_USB_CTRL,0x40023400 
+.equ R8_USB_INT_EN,0x40023402 
+.equ R8_USB_DEV_AD,0x40023403 
+.equ R16_USB_FRAME_NO,0x40023404 
+.equ R8_USB_SUSPEND,0x40023406 
+.equ R8_USB_SPPED_TYPE,0x40023408 
+.equ R8_USB_MIS_ST,0x40023409 
+.equ R8_USB_INT_FG,0x4002340A 
+.equ R8_USB_INT_ST,0x4002340B 
+.equ R16_USB_RX_LEN,0x4002340C 
+.equ R32_UEP_CONFIG, 0x40023410 
+.equ R32_UEP_TYPE, 0x40023414 
+.equ R32_UEP_BUF_MOD, 0x40023418  
+.equ R32_UEP0_DMA, 0x4002341C 
+.equ R32_UEP1_RX_DMA, 0x40023420  
+.equ R32_UEP2_RX_DMA, 0x40023424  
+.equ R32_UEP3_RX_DMA, 0x40023428 
+.equ R32_UEP4_RX_DMA, 0x4002342C  
+.equ R32_UEP5_RX_DMA, 0x40023430  
+.equ R32_UEP6_RX_DMA, 0x40023434  
+.equ R32_UEP7_RX_DMA, 0x40023438 
+.equ R32_UEP8_RX_DMA, 0x4002343C 
+.equ R32_UEP9_RX_DMA, 0x40023440  
+.equ R32_UEP10_RX_DMA, 0x40023444 
+.equ R32_UEP11_RX_DMA, 0x40023448 
+.equ R32_UEP12_RX_DMA, 0x4002344C 
+.equ R32_UEP13_RX_DMA, 0x40023450  
+.equ R32_UEP14_RX_DMA, 0x40023454  
+.equ R32_UEP15_RX_DMA, 0x40023458  
+.equ R32_UEP1_TX_DMA, 0x4002345C  
+.equ R32_UEP2_TX_DMA, 0x40023460 
+.equ R32_UEP3_TX_DMA, 0x40023464  
+.equ R32_UEP4_TX_DMA, 0x40023468  
+.equ R32_UEP5_TX_DMA, 0x4002346C  
+.equ R32_UEP6_TX_DMA, 0x40023470  
+.equ .equ R32_UEP7_TX_DMA, 0x40023474 
+.equ R32_UEP8_TX_DMA, 0x40023478 
+.equ R32_UEP9_TX_DMA, 0x4002347C  
+.equ R32_UEP10_TX_DMA, 0x40023480 
+.equ R32_UEP11_TX_DMA, 0x40023484 
+.equ R32_UEP12_TX_DMA, 0x40023488  
+.equ R32_UEP13_TX_DMA, 0x4002348C  
+.equ R32_UEP14_TX_DMA, 0x40023490 
+.equ R32_UEP15_TX_DMA, 0x40023494  
+.equ R16_UEP0_MAX_LEN, 0x40023498  
+.equ R16_UEP1_MAX_LEN, 0x4002349C 
+.equ R16_UEP2_MAX_LEN, 0x400234A0 
+.equ R16_UEP3_MAX_LEN, 0x400234A4 
+.equ R16_UEP4_MAX_LEN, 0x400234A8 
+.equ R16_UEP5_MAX_LEN, 0x400234AC 
+.equ R16_UEP6_MAX_LEN, 0x400234B0 
+.equ R16_UEP7_MAX_LEN, 0x400234B4 
+.equ R16_UEP8_MAX_LEN, 0x400234B8 
+.equ R16_UEP9_MAX_LEN, 0x400234BC 
+.equ R16_UEP10_MAX_LEN, 0x400234C0 
+.equ R16_UEP11_MAX_LEN, 0x400234C4 
+.equ R16_UEP12_MAX_LEN, 0x400234C8 
+.equ R16_UEP13_MAX_LEN, 0x400234CC 
+.equ R16_UEP14_MAX_LEN, 0x400234D0 
+.equ R16_UEP15_MAX_LEN, 0x400234D4 
+.equ R16_UEP0_T_LEN, 0x400234D8  
+.equ R8_UEP0_TX_CTRL, 0x400234DA 
+.equ R8_UEP0_RX_CTRL, 0x400234DB  
+.equ R16_UEP1_T_LEN, 0x400234DC  
+.equ R8_UEP1_TX_CTRL, 0x400234DE  
+.equ R8_UEP1_RX_CTRL, 0x400234DF 
+.equ R16_UEP2_T_LEN, 0x400234E0 
+.equ R8_UEP2_TX_CTRL, 0x400234E2  
+.equ R8_UEP2_RX_CTRL, 0x400234E3  
+.equ R16_UEP3_T_LEN, 0x400234E4  
+.equ R8_UEP3_TX_CTRL, 0x400234E6  
+.equ R8_UEP3_RX_CTRL, 0x400234E7  
+.equ R16_UEP4_T_LEN, 0x400234E8 
 .equ R8_UEP4_TX_CTRL 0x400234EA Endpoint4 transmit control register 00h 
 .equ R8_UEP4_RX_CTRL 0x400234EB Endpoint4 receive control register 00h 
 .equ R16_UEP5_T_LEN 0x400234EC Endpoint5 transmit length register xxxxh 
