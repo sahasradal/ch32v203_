@@ -536,7 +536,7 @@
 .equ R16_TIM7_PSC, 0x40001428 
 .equ R16_TIM7_ATRLR, 0x4000142C 
 .equ R32_DAC_CTLR, 0x40007400 
-.equ 0x40007404 
+.equ R32_DAC_SWTR,0x40007404 
 .equ R32_DAC_R12BDHR1, 0x40007408 
 .equ R32_DAC_L12BDHR1, 0x4000740C ,
 .equ R32_DAC_R8BDHR1, 0x40007410 
@@ -604,8 +604,6 @@
 .equ R32_UART8_CTLR2, 0x40002010 
 .equ R32_UART8_CTLR3, 0x40002014 
 .equ R32_UART8_GPR, 0x40002018 
-
-
 .equ R16_I2C1_CTLR1 ,0x40005400 
 .equ R16_I2C1_CTLR2 ,0x40005404 
 .equ R16_I2C1_OADDR1 ,0x40005408 
@@ -673,7 +671,6 @@
 .equ R16_USBD_ADDR1_TX, 0x40006010+[USBD_BTABLE] 
 .equ R16_USBD_COUNT1_TX, 0x40006014+[USBD_BTABLE]
 .equ R16_USBD_ADDR1_RX, 0x40006018+[USBD_BTABLE] 
-
 .equ R16_USBD_COUNT1_RX, 0x4000601C+[USBD_BTABLE] 
 .equ R16_USBD_ADDR2_TX, 0x40006020+[USBD_BTABLE] 
 .equ R16_USBD_COUNT2_TX, 0x40006024+[USBD_BTABLE]
@@ -772,265 +769,157 @@
 .equ R8_UEP3_TX_CTRL, 0x400234E6  
 .equ R8_UEP3_RX_CTRL, 0x400234E7  
 .equ R16_UEP4_T_LEN, 0x400234E8 
-.equ R8_UEP4_TX_CTRL 0x400234EA Endpoint4 transmit control register 00h 
-.equ R8_UEP4_RX_CTRL 0x400234EB Endpoint4 receive control register 00h 
-.equ R16_UEP5_T_LEN 0x400234EC Endpoint5 transmit length register xxxxh 
-.equ R8_UEP5_TX_CTRL 0x400234EE Endpoint5 transmit control register 00h 
-.equ R8_UEP5_RX_CTRL 0x400234EF Endpoint5 receive control register 00h 
-.equ R16_UEP6_T_LEN 0x400234F0 Endpoint6 transmit length register xxxxh 
-.equ R8_UEP6_TX_CTRL 0x400234F2 Endpoint6 transmit control register 00h 
-.equ R8_UEP6_RX_CTRL 0x400234F3 Endpoint6 receive control register 00h 
-.equ R16_UEP7_T_LEN 0x400234F4 Endpoint7 transmit length register xxxxh 
-.equ R8_UEP7_TX_CTRL 0x400234F6 Endpoint7 transmit control register 00h 
-.equ R8_UEP7_RX_CTRL 0x400234F7 Endpoint7 receive control register 00h 
-.equ R16_UEP8_T_LEN 0x400234F8 Endpoint8 transmit length register xxxxh 
-.equ R8_UEP8_TX_CTRL 0x400234FA Endpoint8 transmit control register 00h 
-.equ R8_UEP8_RX_CTRL 0x400234FB Endpoint8 receive control register 00h 
-.equ R16_UEP9_T_LEN 0x400234FC Endpoint9 transmit length register xxxxh 
-.equ R8_UEP9_TX_CTRL 0x400234FE Endpoint9 transmit control register 00h 
-.equ R8_UEP9_RX_CTRL 0x400234FF Endpoint9 receive control register 00h 
-.equ R16_UEP10_T_LEN 0x40023500 Endpoint10 transmit length register xxxxh 
-.equ R8_UEP10_TX_CTRL 0x40023502 Endpoint10 transmit control register 00h 
-.equ R8_UEP10_RX_CTRL 0x40023503 Endpoint10 receive control register 00h 
-.equ R16_UEP11_T_LEN 0x40023504 Endpoint11 transmit length register xxxxh 
-.equ R8_UEP11_TX_CTRL 0x40023506 Endpoint11 transmit control register 00h 
-.equ R8_UEP11_RX_CTRL 0x40023507 Endpoint11 receive control register 00h 
-.equ R16_UEP12_T_LEN 0x40023508 Endpoint12 transmit length register xxxxh 
-.equ R8_UEP12_TX_CTRL 0x4002350A Endpoint12 transmit control register 00h 
-.equ R8_UEP12_RX_CTRL 0x4002350B Endpoint12 receive control register 00h 
-.equ R16_UEP13_T_LEN 0x4002350C Endpoint13 transmit length register xxxxh 
-.equ R8_UEP13_TX_CTRL 0x4002350E Endpoint13 transmit control register 00h 
-.equ R8_UEP13_RX_CTRL 0x4002350F Endpoint13 receive control register 00h 
-.equ R16_UEP14_T_LEN 0x40023510 Endpoint14 transmit length register xxxxh 
-.equ R8_UEP14_TX_CTRL 0x40023512 Endpoint14 transmit control register 00h 
-.equ R8_UEP14_RX_CTRL 0x40023513 Endpoint14 receive control register 00h 
-CH32FV2x_V3x Reference Manual  
-http://wch.cn 
-.equ R16_UEP15_T_LEN 
-0x40023514 
-Endpoint15 transmit length register 
-.equ R8_UEP15_TX_CTRL 
-xxxxh 
-0x40023516 
-Endpoint15 transmit control register 
-.equ R8_UEP15_RX_CTRL 
-00h 
-0x40023517 
-Endpoint15 receive control register 
-
-
-.equ R8_USB_CTRL 
-0x50000000 
-USB control register 
-Reset value 
-.equ R8_USB_INT_EN 
-0x06 
-0x50000002 
-USB interrupt enable register 
-.equ R8_USB_DEV_AD 
-0x00 
-0x50000003 
-USB Device address register 
-.equ R32_USB_STATUS 
-0x00 
-0x50000004 
-USB status register 
-.equ R8_USB_MIS_ST 
-0xXX20XXXX 
-0x50000005 
-USB miscellaneous status register 
-.equ R8_USB_INT_FG 
-0xXX 
-0x50000006 
-USB interrupt flag register 
-.equ R8_USB_INT_ST 
-0x20 
-0x50000007 
-USB interrupt status register 
-.equ R16_USB_RX_LEN 
-0xXX 
-0x50000008 
-USB receive length register 
-.equ R32_USB_OTG_CR 
-0xXX 
-0x50000054 
-USB OTG control register 
-.equ R32_USB_OTG_SR 
-0x00 
-0x50000058 
-USB OTG status register
-
-
-
-
-
-.equ R8_UDEV_CTRL 0x50000001 USB device physical port control 
-register 0xX0 
-.equ R8_UEP4_1_MOD 0x5000000C Endpoint 1(9)/4(8/12) mode control 
-register 0x00 
-.equ R8_UEP2_3_MOD 0x5000000D Endpoint 2(10)/3(11) mode control 
-register 0x00 
-.equ R8_UEP5_6_MOD 0x5000000E Endpoint 5(13)/6(14) mode control 
-register 0x00 
-.equ R8_UEP7_MOD 0x5000000F Endpoint 7(15) mode control register 0x00 
-.equ R16_UEP0_DMA 0x50000010 Endpoint 0 buffer start address 0xXXXX 
-.equ R16_UEP1_DMA 0x50000014 Endpoint 1(9) buffer start address 0xXXXX 
-.equ R16_UEP2_DMA 0x50000018 Endpoint 2 (10) buffer start address 0xXXXX 
-.equ R16_UEP3_DMA 0x5000001C Endpoint 3 (11) buffer start address 0xXXXX 
-.equ R16_UEP4_DMA 0x50000020 Endpoint 4 (8/12) buffer start address 0xXXXX 
-.equ R16_UEP5_DMA 0x50000024 Endpoint 5(13) buffer start address 0xXXXX 
-.equ R16_UEP6_DMA 0x50000028 Endpoint 6(14) buffer start address 0xXXXX 
-.equ R16_UEP7_DMA 0x5000002C Endpoint 7(15) buffer start address 0xXXXX 
-.equ R8_UEP0_T_LEN 0x50000030 Endpoint 0 transmit length register 0xXX 
-.equ R8_UEP0_TX_CTRL 0x50000032 Endpoint 0 transmit control register 0x00 
-.equ R8_UEP0_RX_CTRL 0x50000033 Endpoint 0 receive control register 0x00 
-.equ R8_UEP1_T_LEN 0x50000034 Endpoint 1(9) transmit length register 0xXX 
-.equ R8_UEP1_TX_CTRL 0x50000036 Endpoint 1(9) transmit control register 0x00 
-.equ R8_UEP1_RX_CTRL 0x50000037 Endpoint 1(9) receive control register 0x00 
-.equ R8_UEP2_T_LEN 0x50000038 Endpoint 2(10) transmit length 
-register 0xXX 
-.equ R8_UEP2_TX_CTRL 0x5000003A Endpoint 2(10) transmit control 
-register 0x00 
-.equ R8_UEP2_RX_CTRL 0x5000003B Endpoint 2(10) receive control 
-register 0x00 
-.equ R8_UEP3_T_LEN 0x5000003C Endpoint 3(11) transmit length 
-register 0xXX 
-.equ R8_UEP3_TX_CTRL 0x500003E Endpoint 3(11) transmit control 
-register 0x00 
-.equ R8_UEP3_RX_CTRL 0x500003F Endpoint 3(11) receive control 
-register 0x00 
-.equ R8_UEP4_T_LEN 0x50000040 Endpoint 4 (8/12) transmit length 
-register 0xXX 
-.equ R8_UEP4_TX_CTRL 0x50000042 Endpoint 4 (8/12) transmit control 
-register 0x00 
-.equ R8_UEP4_RX_CTRL 0x50000043 Endpoint 4 (8/12) receive control 
-Register 0x00 
-.equ R8_UEP5_T_LEN 0x50000044 Endpoint 5(13) transmit length 
-register 0xXX 
-CH32FV2x_V3x Reference Manual  http://wch.cn 
-V1.7 373     
-.equ R8_UEP5_TX_CTRL 0x50000046 Endpoint 5(13) transmit control 
-register 0x00 
-.equ R8_UEP5_RX_CTRL 0x50000047 Endpoint 5(13) receive control 
-register 0x00 
-.equ R8_UEP6_T_LEN 0x50000048 Endpoint 6(14) transmit length 
-register 0xXX 
-.equ R8_UEP6_TX_CTRL 0x5000004A Endpoint 6(14) transmit control 
-register 0x00 
-.equ R8_UEP6_RX_CTRL 0x5000004B Endpoint 6(14) receive control 
-register 0x00 
-.equ R8_UEP7_T_LEN 0x5000004C Endpoint 7(15) transmit length 
-register 0xXX 
-.equ R8_UEP7_TX_CTRL 0x5000004E Endpoint 7(15) transmit control 
-register 0x00 
-.equ R8_UEP7_RX_CTRL 0x5000004F Endpoint 7(15) receive control 
-register 0x00
-
-
-.equ R8_UHOST_CTRL 0x50000001 USB host physical port control 
-register 0xX0 
-.equ R32_UH_EP_MOD 0x5000000D USB host endpoint mode control 
-register 0x00 
-.equ R16_UH_RX_DMA 0x50000018 USB host receive buffer start address X 
-.equ R16_UH_TX_DMA 0x5000001C USB host transmit buffer start 
-address X 
-.equ R16_UH_SETUP 0x50000036 USB host auxiliary setup register 0x00 
-.equ R8_UH_EP_PID 0x50000038 USB host token setup register 0x00 
-.equ R8_UH_RX_CTRL 0x5000003A USB host receive endpoint control 
-register 0x00 
-.equ R16_UH_TX_LEN 0x5000003C USB host transmit length register X 
-.equ R8_UH_TX_CTRL 0x5000003E USB host transmit endpoint control 
-register 0x00 
-
-
-
-.equ R32_CAN1_CTLR 0x40006400 CAN1 master control register 0x00010002 
-.equ R32_CAN1_STATR 0x40006404 CAN1 master status register 0x00000C02 
-.equ R32_CAN1_TSTATR 0x40006408 CAN1 transmit status register 0x1C000000 
-.equ R32_CAN1_RFIFO0 0x4000640C CAN1 receive FIFO0 control and status 
-register 0x00000000 
-.equ R32_CAN1_RFIFO1 0x40006410 CAN1 receive FIFO1 control and status 
-register 0x00000000 
-.equ R32_CAN1_INTENR 0x40006414 CAN1 interrupt enable register 0x00000000 
-.equ R32_CAN1_ERRSR 0x40006418 CAN1 error status register 0x00000000 
-.equ R32_CAN1_BTIMR 0x4000641C CAN1 bit timing register 0x01230000 
-
-
-.equ R32_CAN1_TTCTLR 0x40006420 CAN1 time trigger control register 0x0000FFFF 
-.equ R32_CAN1_TTCNT 0x40006424 CAN1 time trigger count value register 0x00000000 
-Table 24-6 CAN2 registers 
-Name Access address Description Reset value 
-.equ R32_CAN2_CTLR 0x40006800 CAN2 master control register 0x00010002 
-.equ R32_CAN2_STATR 0x40006804 CAN2 master status register 0x00000C02 
-.equ R32_CAN2_TSTATR 0x40006808 CAN2 transmit status register 0x1C000000 
-.equ R32_CAN2_RFIFO0 0x4000680C CAN2 receive FIFO0 control and status 
-register 0x00000000 
-.equ R32_CAN2_RFIFO1 0x40006810 CAN2 receive FIFO1 control and status 
-register 0x00000000 
-.equ R32_CAN2_INTENR 0x40006814 CAN2 interrupt enable register 0x00000000 
-.equ R32_CAN2_ERRSR 0x40006818 CAN2 error status register 0x00000000 
-.equ R32_CAN2_BTIMR 0x4000681C CAN2 bit timing register 0x01230000 
-.equ R32_CAN2_TTCTLR 0x40006820 CAN2 time trigger control register 0x0000FFFF 
-.equ R32_CAN2_TTCNT 0x40006824 CAN2 time trigger count value register 0x00000000 
-Table 24-7 CAN1 mailbox registers 
-Name Access address Description Reset 
-value 
-.equ R32_CAN1_TXMIR0 0x40006580 CAN1 Tx mailbox0 identifier register X 
-.equ R32_CAN1_TXMDTR0 0x40006584 CAN1 Tx mailbox0 data length and timestamp 
-register X 
-.equ R32_CAN1_TXMDLR0 0x40006588 CAN1 Tx mailbox0 data low register X 
-.equ R32_CAN1_TXMDHR0 0x4000658C CAN1 Tx mailbox0 data high register X 
-.equ R32_CAN1_TXMIR1 0x40006590 CAN1 Tx mailbox1 identifier register X 
-.equ R32_CAN1_TXMDTR1 0x40006594 CAN1 Tx mailbox1 data length and timestamp 
-register X 
-.equ R32_CAN1_TXMDLR1 0x40006598 CAN1 Tx mailbox1 data low register X 
-.equ R32_CAN1_TXMDHR1 0x4000659C CAN1 Tx mailbox1 data high register X 
-.equ R32_CAN1_TXMIR2 0x400065A0 CAN1 Tx mailbox2 identifier register X 
-.equ R32_CAN1_TXMDTR2 0x400065A4 CAN1 Tx mailbox2 data length and timestamp 
-register X 
-.equ R32_CAN1_TXMDLR2 0x400065A8 CAN1 Tx mailbox2 data low register X 
-.equ R32_CAN1_TXMDHR2 0x400065AC CAN1 Tx mailbox2 data high register X 
-.equ R32_CAN1_RXMIR0 0x400065B0 CAN1 Rx FIFO0 mailbox identifier register X 
-.equ R32_CAN1_RXMDTR0 0x400065B4 CAN1 Rx FIFO0 mailbox data length and 
-timestamp register X 
-.equ R32_CAN1_RXMDLR0 0x400065B8 CAN1 Rx FIFO0 mailbox data low register X 
-.equ R32_CAN1_RXMDHR0 0x400065BC CAN1 Rx FIFO0 mailbox data high register X 
-.equ R32_CAN1_RXMIR1 0x400065C0 CAN1 Rx FIFO1 mailbox identifier register X 
-.equ R32_CAN1_RXMDTR1 0x400065C4 CAN1 Rx FIFO1 mailbox data length and 
-timestamp register X 
-.equ R32_CAN1_RXMDLR1 0x400065C8 CAN1 Rx FIFO1 mailbox data low register X 
-.equ R32_CAN1_RXMDHR1 0x400065CC CAN1 Rx FIFO1 mailbox data high register X 
-CH32FV2x_V3x Reference Manual  http://wch.cn 
-V1.7 397     
-Table 24-8 CAN2 Mailbox registers 
-Name Access address Description Reset 
-Value 
-.equ R32_CAN2_TXMIR0 0x40006980 CAN2 Tx mailbox0 identifier register X 
-.equ R32_CAN2_TXMDTR0 0x40006984 CAN2 Tx mailbox0 data length and timestamp 
-register X 
-.equ R32_CAN2_TXMDLR0 0x40006988 CAN2 Tx mailbox0 data low register X 
-.equ R32_CAN2_TXMDHR0 0x4000698C CAN2 Tx mailbox0 data high register X 
-.equ R32_CAN2_TXMIR1 0x40006990 CAN2 Tx mailbox1 identifier register X 
-.equ R32_CAN2_TXMDTR1 0x40006994 CAN2 Tx mailbox1 data length and timestamp 
-register X 
-.equ R32_CAN2_TXMDLR1 0x40006998 CAN2 Tx mailbox1 data low register X 
-.equ R32_CAN2_TXMDHR1 0x4000699C CAN2 Tx mailbox1 data high register X 
-.equ R32_CAN2_TXMIR2 0x400069A0 CAN2 Tx mailbox2 identifier register X 
-.equ R32_CAN2_TXMDTR2 0x400069A4 CAN2 Tx mailbox2 data length and timestamp 
-register X 
-.equ R32_CAN2_TXMDLR2 0x400069A8 CAN2 Tx mailbox2 data low register X 
-.equ R32_CAN2_TXMDHR2 0x400069AC CAN2 Tx mailbox2 data high register X 
-.equ R32_CAN2_RXMIR0 0x400069B0 CAN2 Rx FIFO0 mailbox identifier register X 
-.equ R32_CAN2_RXMDTR0 0x400069B4 CAN2 Rx FIFO0 mailbox data length and 
-timestamp register X 
-.equ R32_CAN2_RXMDLR0 0x400069B8 CAN2 Rx FIFO0 mailbox data low register X 
-.equ R32_CAN2_RXMDHR0 0x400069BC CAN2 Rx FIFO0 mailbox data high register X 
-.equ R32_CAN2_RXMIR1 0x400069C0 CAN2 Rx FIFO1 mailbox identifier register X 
-.equ R32_CAN2_RXMDTR1 0x400069C4 CAN2 Rx FIFO1 mailbox data length and 
-timestamp register X 
-.equ R32_CAN2_RXMDLR1 0x400069C8 CAN2 Rx FIFO1 mailbox data low register X 
-.equ R32_CAN2_RXMDHR1 0x400069CC CAN2 Rx FIFO1 mailbox data high register X 
- 
+.equ R8_UEP4_TX_CTRL, 0x400234EA 
+.equ R8_UEP4_RX_CTRL, 0x400234EB 
+.equ R16_UEP5_T_LEN, 0x400234EC 
+.equ R8_UEP5_TX_CTRL, 0x400234EE 
+.equ R8_UEP5_RX_CTRL, 0x400234EF 
+.equ R16_UEP6_T_LEN, 0x400234F0 
+.equ R8_UEP6_TX_CTRL, 0x400234F2 
+.equ R8_UEP6_RX_CTRL, 0x400234F3 
+.equ R16_UEP7_T_LEN ,0x400234F4 
+.equ R8_UEP7_TX_CTRL, 0x400234F6 
+.equ R8_UEP7_RX_CTRL, 0x400234F7 
+.equ R16_UEP8_T_LEN, 0x400234F8 
+.equ R8_UEP8_TX_CTRL, 0x400234FA 
+.equ R8_UEP8_RX_CTRL, 0x400234FB 
+.equ R16_UEP9_T_LEN, 0x400234FC 
+.equ R8_UEP9_TX_CTRL, 0x400234FE 
+.equ R8_UEP9_RX_CTRL, 0x400234FF 
+.equ R16_UEP10_T_LEN, 0x40023500 
+.equ R8_UEP10_TX_CTRL, 0x40023502 
+.equ R8_UEP10_RX_CTRL, 0x40023503 
+.equ R16_UEP11_T_LEN, 0x40023504 
+.equ R8_UEP11_TX_CTRL, 0x40023506 
+.equ R8_UEP11_RX_CTRL, 0x40023507 
+.equ R16_UEP12_T_LEN, 0x40023508 
+.equ R8_UEP12_TX_CTRL, 0x4002350A 
+.equ R8_UEP12_RX_CTRL, 0x4002350B 
+.equ R16_UEP13_T_LEN, 0x4002350C 
+.equ R8_UEP13_TX_CTRL, 0x4002350E 
+.equ R8_UEP13_RX_CTRL, 0x4002350F 
+.equ R16_UEP14_T_LEN, 0x40023510 
+.equ R8_UEP14_TX_CTRL, 0x40023512 
+.equ R8_UEP14_RX_CTRL, 0x40023513 
+.equ R16_UEP15_T_LEN ,0x40023514 
+.equ R8_UEP15_TX_CTRL ,0x40023516 
+.equ R8_UEP15_RX_CTRL, 0x40023517 
+.equ R8_USB_CTRL ,0x50000000 
+.equ R8_USB_INT_EN ,0x50000002 
+.equ R8_USB_DEV_AD,0x50000003 
+.equ R32_USB_STATUS ,0x50000004 
+.equ R8_USB_MIS_ST ,0x50000005 
+.equ R8_USB_INT_FG, 0x50000006 
+.equ R8_USB_INT_ST ,0x50000007 
+.equ R16_USB_RX_LEN ,0x50000008 
+.equ R32_USB_OTG_CR,0x50000054 
+.equ R32_USB_OTG_SR,0x50000058 
+.equ R8_UDEV_CTRL, 0x50000001 
+.equ R8_UEP4_1_MOD, 0x5000000C 
+.equ R8_UEP2_3_MOD, 0x5000000D 
+.equ R8_UEP5_6_MOD, 0x5000000E 
+.equ R8_UEP7_MOD, 0x5000000F 
+.equ R16_UEP0_DMA, 0x50000010
+.equ R16_UEP1_DMA, 0x50000014 
+.equ R16_UEP2_DMA, 0x50000018 
+.equ R16_UEP3_DMA, 0x5000001C
+.equ R16_UEP4_DMA, 0x50000020
+.equ R16_UEP5_DMA, 0x50000024
+.equ R16_UEP6_DMA, 0x50000028 
+.equ R16_UEP7_DMA, 0x5000002C
+.equ R8_UEP0_T_LEN, 0x50000030
+.equ R8_UEP0_TX_CTRL, 0x50000032
+.equ R8_UEP0_RX_CTRL, 0x50000033 
+.equ R8_UEP1_T_LEN, 0x50000034 
+.equ R8_UEP1_TX_CTRL, 0x50000036
+.equ R8_UEP1_RX_CTRL, 0x50000037
+.equ R8_UEP2_T_LEN, 0x50000038
+.equ R8_UEP2_TX_CTRL, 0x5000003A 
+.equ R8_UEP2_RX_CTRL, 0x5000003B 
+.equ R8_UEP3_T_LEN, 0x5000003C 
+.equ R8_UEP3_TX_CTRL, 0x500003E
+.equ R8_UEP3_RX_CTRL, 0x500003F 
+.equ R8_UEP4_T_LEN, 0x50000040 
+.equ R8_UEP4_TX_CTRL, 0x50000042
+.equ R8_UEP4_RX_CTRL, 0x50000043 
+.equ R8_UEP5_T_LEN, 0x50000044 
+.equ R8_UEP5_TX_CTRL, 0x50000046 
+.equ R8_UEP5_RX_CTRL, 0x50000047 
+.equ R8_UEP6_T_LEN, 0x50000048 
+.equ R8_UEP6_TX_CTRL, 0x5000004A 
+.equ R8_UEP6_RX_CTRL, 0x5000004B 
+.equ R8_UEP7_T_LEN, 0x5000004C 
+.equ R8_UEP7_TX_CTRL, 0x5000004E 
+.equ R8_UEP7_RX_CTRL, 0x5000004F 
+.equ R8_UHOST_CTRL, 0x50000001 
+.equ R32_UH_EP_MOD, 0x5000000D 
+.equ R16_UH_RX_DMA, 0x50000018  
+.equ R16_UH_TX_DMA, 0x5000001C 
+.equ R16_UH_SETUP, 0x50000036 
+.equ R8_UH_EP_PID, 0x50000038  
+.equ R8_UH_RX_CTRL, 0x5000003A 
+.equ R16_UH_TX_LEN, 0x5000003C 
+.equ R8_UH_TX_CTRL, 0x5000003E 
+.equ R32_CAN1_CTLR, 0x40006400  
+.equ R32_CAN1_STATR, 0x40006404 
+.equ R32_CAN1_TSTATR, 0x40006408 
+.equ R32_CAN1_RFIFO0, 0x4000640C 
+.equ R32_CAN1_RFIFO1, 0x40006410 
+.equ R32_CAN1_INTENR, 0x40006414  
+.equ R32_CAN1_ERRSR, 0x40006418 
+.equ R32_CAN1_BTIMR, 0x4000641C 
+.equ R32_CAN1_TTCTLR, 0x40006420  
+.equ R32_CAN1_TTCNT, 0x40006424  
+.equ R32_CAN2_CTLR, 0x40006800 
+.equ R32_CAN2_STATR, 0x40006804 
+.equ R32_CAN2_TSTATR, 0x40006808 
+.equ R32_CAN2_RFIFO0, 0x4000680C 
+.equ R32_CAN2_RFIFO1, 0x40006810 
+.equ R32_CAN2_INTENR, 0x40006814 
+.equ R32_CAN2_ERRSR, 0x40006818 
+.equ R32_CAN2_BTIMR, 0x4000681C 
+.equ R32_CAN2_TTCTLR, 0x40006820  
+.equ R32_CAN2_TTCNT, 0x40006824 
+.equ R32_CAN1_TXMIR0, 0x40006580  
+.equ R32_CAN1_TXMDTR0, 0x40006584 
+.equ R32_CAN1_TXMDLR0, 0x40006588  
+.equ R32_CAN1_TXMDHR0, 0x4000658C 
+.equ R32_CAN1_TXMIR1, 0x40006590 
+.equ R32_CAN1_TXMDTR1, 0x40006594  
+.equ R32_CAN1_TXMDLR1, 0x40006598  
+.equ R32_CAN1_TXMDHR1, 0x4000659C 
+.equ R32_CAN1_TXMIR2, 0x400065A0  
+.equ R32_CAN1_TXMDTR2, 0x400065A4 
+.equ R32_CAN1_TXMDLR2, 0x400065A8  
+.equ R32_CAN1_TXMDHR2, 0x400065AC 
+.equ R32_CAN1_RXMIR0, 0x400065B0 
+.equ R32_CAN1_RXMDTR0, 0x400065B4 
+.equ R32_CAN1_RXMDLR0, 0x400065B8 
+.equ R32_CAN1_RXMDHR0, 0x400065BC  
+.equ R32_CAN1_RXMIR1, 0x400065C0 
+.equ R32_CAN1_RXMDTR1, 0x400065C4 
+.equ R32_CAN1_RXMDLR1, 0x400065C8
+.equ R32_CAN1_RXMDHR1, 0x400065CC 
+.equ R32_CAN2_TXMIR0, 0x40006980 
+.equ R32_CAN2_TXMDTR0, 0x40006984 
+.equ R32_CAN2_TXMDLR0, 0x40006988 
+.equ R32_CAN2_TXMDHR0, 0x4000698C 
+.equ R32_CAN2_TXMIR1, 0x40006990  
+.equ R32_CAN2_TXMDTR1, 0x40006994 
+.equ R32_CAN2_TXMDLR1, 0x40006998 
+.equ R32_CAN2_TXMDHR1, 0x4000699C 
+.equ R32_CAN2_TXMIR2, 0x400069A0 
+.equ R32_CAN2_TXMDTR2, 0x400069A4 
+.equ R32_CAN2_TXMDLR2, 0x400069A8 
+.equ R32_CAN2_TXMDHR2, 0x400069AC 
+.equ R32_CAN2_RXMIR0, 0x400069B0  
+.equ R32_CAN2_RXMDTR0, 0x400069B4 
+.equ R32_CAN2_RXMDLR0, 0x400069B8 
+.equ R32_CAN2_RXMDHR0, 0x400069BC 
+.equ R32_CAN2_RXMIR1, 0x400069C0  
+.equ R32_CAN2_RXMDTR1, 0x400069C4 
+.equ R32_CAN2_RXMDLR1, 0x400069C8  
+.equ R32_CAN2_RXMDHR1, 0x400069CC 
 .equ R32_CAN1_FCTLR, 0x40006600  
 .equ R32_CAN1_FMCFGR, 0x40006604  
 .equ R32_CAN1_FSCFGR, 0x4000660C  
@@ -1045,7 +934,6 @@ timestamp register X
 .equ R32_CAN1_F3R1, 0x40006658  
 .equ R32_CAN1_F3R2, 0x4000665C  
 .equ R32_CAN1_F4R1, 0x40006660  
-     
 .equ R32_CAN1_F4R2, 0x40006664  
 .equ R32_CAN1_F5R1, 0x40006668  
 .equ R32_CAN1_F5R2, 0x4000666C  
@@ -1091,10 +979,8 @@ timestamp register X
 .equ R32_CAN1_F25R2, 0x4000670C  
 .equ R32_CAN1_F26R1, 0x40006710  
 .equ R32_CAN1_F26R2, 0x40006714  
-     
 .equ R32_CAN1_F27R1, 0x40006718  
 .equ R32_CAN1_F27R2, 0x4000671C  
- 
 .equ R32_CAN2_FCTLR, 0x40006A00  
 .equ R32_CAN2_FMCFGR, 0x40006A04  
 .equ R32_CAN2_FSCFGR, 0x40006A0C  
@@ -1135,7 +1021,6 @@ timestamp register X
 .equ R32_CAN2_F16R1, 0x40006AC0  
 .equ R32_CAN2_F16R2, 0x40006AC4  
 .equ R32_CAN2_F17R1, 0x40006AC8  
-     
 .equ R32_CAN2_F17R2, 0x40006ACC  
 .equ R32_CAN2_F18R1, 0x40006AD0  
 .equ R32_CAN2_F18R2, 0x40006AD4  
@@ -1157,10 +1042,6 @@ timestamp register X
 .equ R32_CAN2_F26R2, 0x40006B14  
 .equ R32_CAN2_F27R1, 0x40006B18  
 .equ R32_CAN2_F27R2, 0x40006B1C 
-
-
-
-
 .equ R8_DVP_CR0 ,0x50050000 
 .equ R8_DVP_CR1,0x50050001 
 .equ R8_DVP_IER,0x50050002 
@@ -1176,8 +1057,6 @@ timestamp register X
 .equ R16_DVP_CAPCNT, 0x5005001C  
 .equ R16_DVP_VLINE, 0x5005001E  
 .equ R32_DVP_DR, 0x50050020 
-
-
 .equ R32_FSMC_BCR1, 0xA0000000 
 .equ R32_FSMC_BTR1, 0xA0000004 
 .equ R32_FSMC_PCR2, 0xA0000060  
@@ -1186,8 +1065,6 @@ timestamp register X
 .equ R32_FSMC_PATT2, 0xA000006C 
 .equ R32_FSMC_ECCR2, 0xA0000074 
 .equ R32_FSMC_BWTR1, 0xA0000104 
-
-
 .equ R32_ETH_MACCR ,0x40028000 
 .equ R32_ETH_MACFFR,0x40028004 
 .equ R32_ETH_MACHTHR ,0x40028008 
@@ -1198,7 +1075,6 @@ timestamp register X
 .equ R32_ETH_MACVLAN ,0x4002801C 
 .equ R32_ETH_MACRWUFFR, 0x40028028 
 .equ R32_ETH_MACPMTCSR, 0x4002802C 
-  
 .equ R32_ETH_MACSR, 0x40028038  
 .equ R32_ETH_MACIMR, 0x4002803C  
 .equ R32_ETH_MACA0HR, 0x40028040  
@@ -1209,8 +1085,6 @@ timestamp register X
 .equ R32_ETH_MACA2LR, 0x40028054  
 .equ R32_ETH_MACA3HR, 0x40028058  
 .equ R32_ETH_MACA3LR, 0x4002805C  
- 
-
 .equ R32_ETH_MMCCR, 0x40028100  
 .equ R32_ETH_MMCRIR, 0x40028104 
 .equ R32_ETH_MMCTIR, 0x40028108 
@@ -1222,8 +1096,6 @@ timestamp register X
 .equ R32_ETH_MMCRFCECR, 0x40028194 
 .equ R32_ETH_MMCRFAECR, 0x40028198 
 .equ R32_ETH_MMCRGUFCR, 0x400281C4 
- 
- 
 .equ R32_ETH_PTPTSCR, 0x40028700  
 .equ R32_ETH_PTPSSIR, 0x40028704  
 .equ R32_ETH_PTPTSHR, 0x40028708  
@@ -1246,10 +1118,6 @@ timestamp register X
 .equ R32_ETH_DMACHRDR, 0x4002904C  
 .equ R32_ETH_DMACHTBAR, 0x40029050  
 .equ R32_ETH_DMACHRBAR, 0x40029054 
-
-
-
-
 .equ R8_ETH_EIE, 0x40028003 
 .equ R8_ETH_EIR, 0x40028004 
 .equ R8_ETH_ESTAT, 0x40028005  
@@ -1277,16 +1145,9 @@ timestamp register X
 .equ R8_ETH_MISTAT, 0x40028025  
 .equ R16_ETH_MIWR, 0x40028026  
 .equ R32_ETH_MAADRL, 0x40028028 
-     
 .equ R16_ETH_MAADRH, 0x4002802C  
-
-
-
-
 .equ R32_SDIO_POWER ,0x40018000 
- 
 .equ R32_SDIO_CLKCR ,0x40018004 
-
 .equ R32_SDIO_ARG ,0x40018008 
 .equ R32_SDIO_CMD, 0x4001800C  
 .equ R32_SDIO_RESPCMD, 0x40018010 
@@ -1300,7 +1161,6 @@ timestamp register X
 .equ R32_SDIO_MASK, 0x4001803C  
 .equ R32_SDIO_ FIFOCNT, 0x40018048 
 .equ R32_SDIO_FIFO, 0x40018080  
-
 .equ R32_RNG_CR, 0x40023C00 
 .equ R32_RNG_SR ,0x40023C04  
 .equ R32_RNG_DR ,0x40023C08  
