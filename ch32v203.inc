@@ -1,6 +1,6 @@
 .equ SRAM_start, 0x20000000
-.equ SRAM_end,  0x20000800
-.equ STACK, 0x20000800 
+.equ SRAM_end,  0x20002800
+.equ STACK, 0x20002800 
 
 .equ R32_PWR_CTLR ,0x40007000  
 .equ R32_PWR_CSR ,0x40007004 
